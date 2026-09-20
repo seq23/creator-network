@@ -1,4 +1,3 @@
-4dc683480e374916ce6716648659f193f8c7b01a40a84a31027ca89b62fa1aad  ./.env.example
 560e3d607399dd171b1df4c5f9e86ebd8659c56e77bc581209875be554e761ec  ./.github/workflows/daily-creator-network.yml
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./.github/workflows/daily-creator-network.yml.tmp
 b8bb0188c6810a87984c668e17573228ea875e00fdff9f266c7157ff225d7fa9  ./.github/workflows/phase1-structural.yml
@@ -123,7 +122,6 @@ d7460a248b277b7ca1e76b29b597092e26500c88b977e55040a0af770bf2e4e6  ./media/identi
 fd00ff4702192c33e96b6a3b467d8e02d99edc4220d53d5a3644afecc7363f8d  ./media/renderers/http-renderer.js
 3d0bdddc5bac5860d64911b3e5aec549f1a278d4752bac5f31178814e5d0965f  ./media/renderers/local-ffmpeg.js
 c8939f59cbe1f28a832604284bf3e25f59987a82c39ff6e64dab794ca4b5c3a8  ./ops/env/ENV_VAULT.md
-56daa00071f73bcd895e17bc06076eb5d3f32f5480c4fbc52ad6585cf7e87edf  ./ops/env/creator-network.env.example
 56c777948c4e371ba1046cc2d059c8d450cb51bdc69fbeb67fbd51e59bcf5089  ./ops/env/env.schema.json
 baabd62dc33fecb0662a9a1c01eee4dee74d9973921132bdfb06dc107b087af3  ./optimizer/README.md
 b853e72efccafc0ec11d099628329ae8ae7666b4210a7744fceba6e92c7a7737  ./optimizer/config/policy.json
@@ -156,8 +154,6 @@ ac67361c6300ed6aa4526e4a988517536a2997010dbd4109553463e5d7fb5d62  ./schemas/publ
 296d3b0902cc27b260b6285181117a8fa22eda507e52b2596b3a52917128986d  ./schemas/qa_result.schema.json
 1fa6d334568042c9fce33bf373bbd3830c8f019b3ff1b60bc2df83aa40d52525  ./schemas/weekly_owner_report.schema.json
 b83ab4c02483ced7db1a7bb2b418888e43252404fd748db9063c6db96d0e8fbb  ./scripts/cloudflare-state-bootstrap.sh
-ae45fc79ef4e1c6281f0cdb4920ba4adc4a6dcb9ad9207927d1f7592bf75009a  ./scripts/create-local-env-vault.sh
-0b969a93d16884092a55c412ccbfe9317ce4b4413e22cb1f069ca33f4223b087  ./scripts/wrangler-secret-put-from-vault.sh
 1329103b067c39da392d828faf79a70c5a0e95d47fa17689db827fbf4c8a50e6  ./state/budget.json
 92975f2ed8f1ee3f2172a5e442e8fff883c2c4f8ad8b4e87ac179acfd975826d  ./state/distribution.json
 b3d181a84a556970fc37ae2b87d6ae00a096bfa63105eb8a8dc430b8141e3de8  ./state/health/network.json

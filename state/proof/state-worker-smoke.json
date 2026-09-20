@@ -1,7 +1,7 @@
 {
   "endpoint": "https://creator-network-state.seq-taylor.workers.dev",
-  "started": "2026-09-20T21:38:33.314Z",
-  "finished": "2026-09-20T21:38:34.186Z",
+  "started": "2026-09-20T21:53:26.756Z",
+  "finished": "2026-09-20T21:53:27.734Z",
   "status": "LIVE_VALIDATED",
   "checks": [
     {
@@ -26,6 +26,10 @@
     },
     {
       "name": "receipt POST is idempotent",
+      "ok": true
+    },
+    {
+      "name": "receipts read back by run_id",
       "ok": true
     },
     {

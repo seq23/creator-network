@@ -18,6 +18,7 @@ const key=`smoke/${Date.now()}`;
 await check('missing key returns fallback',async()=>{assert.deepEqual(await c.get(key,{none:true}),{none:true});});
 await check('put/get round-trip, version increments',async()=>{const a=await c.put(key,{n:1});assert.equal(a.version,1);const b=await c.put(key,{n:2});assert.equal(b.version,2);assert.deepEqual(await c.get(key),{n:2});});
 await check('receipt POST is idempotent',async()=>{const id=`${key}:receipt`;const r1=await c.receipt({id,run_id:'smoke',employee_id:'smoke',step:'SMOKE',status:'PASS',detail:{started}});const r2=await c.receipt({id,run_id:'smoke',employee_id:'smoke',step:'SMOKE',status:'CHANGED'});assert.equal(r1.ok,true);assert.equal(r2.ok,true);assert.equal(r1.id,r2.id);});
+await check('receipts read back by run_id',async()=>{const b=await c.receipts('smoke');assert.ok(b.receipts.some(x=>x.id===`${key}:receipt`&&x.status==='PASS'&&x.detail.started===started),'the receipt just written must be served back');});
 await check('receipt missing fields rejected (400)',async()=>{await assert.rejects(()=>c.receipt({id:'x'}),/STATE_HTTP_400/);});
 
 const ok=checks.every(x=>x.ok); const result={endpoint,started,finished:new Date().toISOString(),status:ok?'LIVE_VALIDATED':'FAILED',checks};

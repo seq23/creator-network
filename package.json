@@ -11,6 +11,9 @@
     "release:prepush:local": "printf 'release:prepush profile: LOCAL\\n' && npm run check && npm test",
     "deploy:state": "npx wrangler@4.76.0 deploy --config cloudflare/state-worker/wrangler.toml",
     "secret:state": "python3 scripts/vault-exec.py -- sh -c 'printf %s \"$CREATOR_STATE_API_TOKEN\" | npx wrangler@4.76.0 secret put STATE_API_TOKEN --config cloudflare/state-worker/wrangler.toml'",
-    "smoke:state": "python3 scripts/vault-exec.py -- node scripts/state-smoke.mjs"
+    "smoke:state": "python3 scripts/vault-exec.py -- node scripts/state-smoke.mjs",
+    "secrets:github": "python3 scripts/vault-exec.py -- sh scripts/github-secrets.sh",
+    "vars:github": "sh scripts/github-variables.sh",
+    "probe:actions": "python3 scripts/vault-exec.py -- node scripts/actions-state-probe.mjs"
   }
 }

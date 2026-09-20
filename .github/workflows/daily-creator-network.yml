@@ -16,7 +16,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - name: state-check — prove the lane reaches D1 and leave a receipt (Rule 0)
+        env:
+          CREATOR_STATE_API_URL: ${{ vars.CREATOR_STATE_API_URL }}
+          CREATOR_STATE_API_TOKEN: ${{ secrets.CREATOR_STATE_API_TOKEN }}
+        run: node scripts/actions-state-probe.mjs precheck
       - name: Preflight and operate fail-closed
+        id: operate
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           WEEKLY_EMAIL_ENDPOINT: ${{ secrets.WEEKLY_EMAIL_ENDPOINT }}
@@ -67,4 +73,15 @@ jobs:
           BUFFER_CHANNEL_MAYA_REYES_X: ${{ vars.BUFFER_CHANNEL_MAYA_REYES_X }}
           BUFFER_CHANNEL_MAYA_REYES_TIKTOK: ${{ vars.BUFFER_CHANNEL_MAYA_REYES_TIKTOK }}
           BUFFER_CHANNEL_MAYA_REYES_YOUTUBE: ${{ vars.BUFFER_CHANNEL_MAYA_REYES_YOUTUBE }}
-        run: node runtime/run.mjs
+        run: |
+          set +e
+          node runtime/run.mjs
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit $code
+      - name: state-outcome — record how the run ended, read it back
+        if: always()
+        env:
+          CREATOR_STATE_API_URL: ${{ vars.CREATOR_STATE_API_URL }}
+          CREATOR_STATE_API_TOKEN: ${{ secrets.CREATOR_STATE_API_TOKEN }}
+        run: node scripts/actions-state-probe.mjs outcome "${{ steps.operate.outputs.exit_code }}"

@@ -1,6 +1,6 @@
 # Creator Network Environment Vault
 
-This is the canonical inventory of configuration and secret material required by Creator Network. **Never put secret values in Git.** Values belong in local ignored files during setup and in the deployment secret stores (GitHub Actions secrets and/or Cloudflare Wrangler secrets) once the relevant runtime exists.
+This is the canonical inventory of configuration and secret material required by Creator Network. **Never put secret values in Git.** Values live in the owner's vault and reach GitHub Actions / Cloudflare only through the stdin paths in *Storage rule* below.
 
 ## Collection states
 - `REQUIRED_NOW`: collect before production wiring/activation.
@@ -55,10 +55,20 @@ Live since 2026-09-20 (Phase 3). IDs are configuration, not secrets:
 ## Runtime controls
 - `REQUIRE_LIVE_READY=false` until final validation.
 - `AUTONOMOUS_RUNTIME_WIRED=false` until real step wiring passes integration tests.
-- `DURABLE_STATE_CONFIGURED=false` until Cloudflare-backed persistence passes write/read/recovery tests.
+- `DURABLE_STATE_CONFIGURED=true` since Phase 3/4 (2026-09-20): write/read/receipt round-trips proven live by `npm run smoke:state`.
 
 ## Storage rule
-1. Local collection: `secrets/creator-network.env` (ignored, mode 600).
-2. GitHub Actions: secrets/variables mapped explicitly in workflow YAML.
-3. Cloudflare Worker secrets: use Wrangler `secret put` after the Worker exists.
-4. Never copy secret values into `.env.example`, docs, state JSON, test fixtures, logs, or ZIP receipts.
+Secret values exist in exactly one place at rest: the owner's Repo Operator vault (Keychain), authorised to project
+`creator-network`. There is no local env file, no `.env.example`, no `secrets/` directory — that path was deleted in
+Phase 4 (2026-09-20) because a plaintext file contradicts the vault contract.
+1. **vault → `scripts/vault-exec.py` → child process env.** The value is never an argument, never on disk, and the
+   child's output is redacted. Every command that needs a secret runs as `python3 scripts/vault-exec.py -- <cmd>`.
+2. **GitHub Actions secrets:** `npm run secrets:github` (`scripts/github-secrets.sh` inside the vault child) pipes
+   each value to `gh secret set NAME -R seq23/creator-network` on stdin and prints names only. Prove with
+   `gh secret list`.
+3. **GitHub Actions variables** (non-secret ids and switches): `npm run vars:github` (`scripts/github-variables.sh`);
+   org ids are read from `distribution/config/buffer-discovery.json`, never typed.
+4. **Cloudflare Worker secrets:** `npm run secret:state` pipes the vault value to `wrangler secret put` on stdin.
+5. Workflow YAML maps every secret/variable explicitly (`.github/workflows/daily-creator-network.yml`); the lane's
+   `state-check` step proves the injected credentials reach D1 before anything runs.
+6. Never copy secret values into docs, state JSON, test fixtures, logs, receipts or ZIP receipts.

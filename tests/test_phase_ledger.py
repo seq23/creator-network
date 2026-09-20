@@ -18,6 +18,12 @@ class PhaseLedger(unittest.TestCase):
  def test_phase1_is_complete_and_live_validated(self):
   t,rows=self.rows(); self.assertIn('COMPLETE',rows[0][2]); self.assertIn('LIVE VALIDATED',rows[0][2])
   self.assertTrue((ROOT/'distribution/config/buffer-discovery.json').is_file()); self.assertTrue((ROOT/'docs/BUFFER_DISCOVERY_REPORT.md').is_file())
+ def test_phase4_is_complete_with_a_run_url_and_d1_receipts(self):
+  import json; t,rows=self.rows(); self.assertIn('COMPLETE',rows[3][2]); self.assertIn('LIVE VALIDATED',rows[3][2])
+  self.assertRegex(rows[3][3],r'https://github\.com/seq23/creator-network/actions/runs/\d+'); self.assertTrue((ROOT/'docs/PHASE4_CLOUD_CREDENTIALS.md').is_file())
+  d=json.loads((ROOT/'state/proof/actions-lane-receipts.json').read_text()); self.assertTrue(d['run_id'].startswith('actions/'))
+  steps={r['step']:r for r in d['receipts']}; self.assertEqual(steps['ACTIONS_PRECHECK']['status'],'PASS'); self.assertEqual(steps['ACTIONS_PRECHECK']['detail']['health'],{'ok':True,'backend':'d1'})
+  self.assertIn('ACTIONS_OUTCOME',steps); self.assertEqual(steps['ACTIONS_OUTCOME']['detail']['run_url'],'https://github.com/seq23/creator-network/actions/runs/'+d['run_id'].split('/')[1])
  def test_boundaries_and_deferrals_stated(self):
   t,_=self.rows()
   for needle in ('MUST NOT mutate','Conversion attribution is a separate deferred project','buffer-access-token','never written to the repository'): self.assertIn(needle,t)
@@ -37,5 +43,5 @@ class GapAudit(unittest.TestCase):
    if state.strip()=='IMPLEMENTED + PROVEN': self.assertRegex(evidence,r'docs/|state/proof/|scripts/|provisioning report|readiness',f'{cap.strip()!r} claims PROVEN without a proof artifact')
  def test_state_worker_proof_is_live_validated(self):
   import json; d=json.loads((ROOT/'state/proof/state-worker-smoke.json').read_text())
-  self.assertEqual(d['status'],'LIVE_VALIDATED'); self.assertTrue(all(c['ok'] for c in d['checks'])); self.assertGreaterEqual(len(d['checks']),7)
+  self.assertEqual(d['status'],'LIVE_VALIDATED'); self.assertTrue(all(c['ok'] for c in d['checks'])); self.assertGreaterEqual(len(d['checks']),8)
 if __name__=='__main__': unittest.main()

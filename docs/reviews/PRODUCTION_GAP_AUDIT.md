@@ -9,7 +9,7 @@ Classification of every major capability in the 2026-09-20 handoff against the c
 | Social channels to post to | BLOCKED | 0 channels on all four accounts; the social accounts do not exist (owner, 2026-09-20) | signup kit after Phase 7 |
 | Local credential injection (vault → child) | IMPLEMENTED + PROVEN | `scripts/vault-exec.py`; inherited provider keys scrubbed, output redacted | — |
 | Durable state (Worker + D1) | IMPLEMENTED + PROVEN | `state/proof/state-worker-smoke.json`: 401, health→D1, versioned PUT/GET, idempotent receipts | — |
-| Cloud credential provisioning (GitHub secrets/vars) | MISSING | 0 secrets, 0 variables; documented path is a plaintext file | Phase 4 |
+| Cloud credential provisioning (GitHub secrets/vars) | IMPLEMENTED + PROVEN | `docs/PHASE4_CLOUD_CREDENTIALS.md`: 5 secrets + 15 variables from the vault via stdin (`gh secret list` 2026-09-20); plaintext path deleted | — |
 | Employee persona/boundary contracts | IMPLEMENTED + UNPROVEN | `employees/*/employee.json` schema-validated; never consumed by a live generation | Phase 5/6 |
 | Employee memory/state | PARTIAL | `memory.json` empty for all four; runtime persists `content_history` only | Phase 5/11 |
 | Product knowledge packs | MISSING | `knowledge/` is a README | Phase 5 |
@@ -28,7 +28,7 @@ Classification of every major capability in the 2026-09-20 handoff against the c
 | Publish jobs + idempotency + retry + confirm | IMPLEMENTED + UNPROVEN | `distribution/lib/*` mock-tested; `createPost` never sent live | Phase 10 |
 | Capacity reservation before spend | IMPLEMENTED + UNPROVEN | `slots.mjs` ISO-week keyed; RESERVE precedes INTELLIGENCE in runtime | Phase 10 |
 | Daily loop PRECHECK→PERSIST | PARTIAL | wired; CONFIRM/METRICS/OPTIMIZE are DEFERRED no-ops nothing revisits | Phase 11 |
-| Fail-closed standby | IMPLEMENTED + PROVEN | `runtime/run.mjs` refuses without readiness; but exits 0 — inert-green in Actions | Phase 11 |
+| Fail-closed standby | IMPLEMENTED + PROVEN | `runtime/run.mjs` refuses without readiness; exits 0 but the lane now writes D1 receipts every run (`state/proof/actions-lane-receipts.json`) | Phase 11 |
 | Pipeline floor (3 days) | PARTIAL | policy value exists; no inventory, nothing enforces it | Phase 11 |
 | Independent heartbeats | IMPLEMENTED + UNPROVEN | `runHeartbeat` unit-tested; runtime never calls it | Phase 12 |
 | Synthetic live checks | MISSING | every live check is an `UNVERIFIED` placeholder | Phase 12 |
