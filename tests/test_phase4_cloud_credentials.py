@@ -11,7 +11,7 @@ class PlaintextPathGone(unittest.TestCase):
   for f in ('scripts/create-local-env-vault.sh','scripts/wrangler-secret-put-from-vault.sh','ops/env/creator-network.env.example','.env.example','secrets'):
    self.assertFalse((R/f).exists(),f'{f} is the plaintext path Phase 4 deleted')
  def test_nothing_points_at_the_plaintext_path(self):
-  out=subprocess.run(['git','grep','-n','-e','secrets/creator-network.env','-e','env.example','-e','create-local-env-vault','-e','wrangler-secret-put-from-vault','--','.',':!tests/',':!authority/PHASE_LEDGER.md',':!docs/reviews/',':!ops/env/ENV_VAULT.md'],cwd=R,text=True,capture_output=True).stdout
+  out=subprocess.run(['git','grep','-n','-e','secrets/creator-network.env','-e','env.example','-e','create-local-env-vault','-e','wrangler-secret-put-from-vault','--','.',':!tests/',':!authority/PHASE_LEDGER.md',':!docs/',':!ops/env/ENV_VAULT.md'],cwd=R,text=True,capture_output=True).stdout
   self.assertEqual(out.strip(),'',f'plaintext path still referenced:\n{out}')
  def test_gitignore_has_no_env_example_exception(self):
   self.assertNotIn('!.env.example',(R/'.gitignore').read_text())
