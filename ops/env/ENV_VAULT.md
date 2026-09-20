@@ -45,13 +45,12 @@ If the selected provider uses different names, add them to the schema before act
 - `WEEKLY_REPORT_FROM` — identifier
 
 ## Cloudflare runtime / durable state
-These are intentionally reserved for the hardening implementation. Exact IDs are created by Wrangler and then recorded as configuration:
-- `CLOUDFLARE_ACCOUNT_ID` — identifier/secret-like operational config
-- `CREATOR_NETWORK_D1_DATABASE_ID` — identifier
-- `CREATOR_NETWORK_R2_BUCKET` — identifier if media/state artifacts use R2
-- `CREATOR_NETWORK_KV_NAMESPACE_ID` — identifier if KV is selected
-
-Do **not** invent IDs before resources exist.
+Live since 2026-09-20 (Phase 3). IDs are configuration, not secrets:
+- `CLOUDFLARE_ACCOUNT_ID` — `8d147e242033699dd37c6f5a451f48d2` (in `cloudflare/state-worker/wrangler.toml`)
+- `CREATOR_NETWORK_D1_DATABASE_ID` — `fe891a54-7870-4c2d-b4da-ec5ea7456989`
+- `CREATOR_STATE_API_URL` — `https://creator-network-state.seq-taylor.workers.dev`
+- `CREATOR_STATE_API_TOKEN` — secret; vault credential `creator-network-state-api-token`
+- `CREATOR_NETWORK_R2_BUCKET` / `CREATOR_NETWORK_KV_NAMESPACE_ID` — not created; only if the media library (Phase 9) needs object storage
 
 ## Runtime controls
 - `REQUIRE_LIVE_READY=false` until final validation.

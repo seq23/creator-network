@@ -10,10 +10,10 @@ This ledger uses the **15-phase production-completion numbering** from the 2026-
 
 | # | Phase | State | Evidence / what is still missing |
 |---|---|---|---|
-| 1 | Buffer read-only discovery | **COMPLETE — LIVE VALIDATED** (2026-09-20) | `scripts/vault-exec.py` + `scripts/buffer-discovery.mjs`; four keys verified against `account.email`, isolation PASS, ids in `distribution/config/buffer-discovery.json`, report in `docs/BUFFER_DISCOVERY_REPORT.md`. Finding: **zero social channels connected on all four accounts.** |
-| 2 | Production gap audit | PARTIAL | `docs/reviews/PHASE9_HOSTILE_REVIEW.md` + the 2026-09-20 discovery pass; no in-repo per-capability PROVEN/UNPROVEN table yet |
-| 3 | Production infrastructure | NOT STARTED | no Creator Network Worker/D1/R2/KV exists in the Cloudflare account; `cloudflare/state-worker/wrangler.toml` still carries a placeholder D1 id |
-| 4 | Cloud credential provisioning | NOT STARTED | 0 GitHub secrets/variables; the documented plaintext `secrets/creator-network.env` path contradicts the vault contract and must be replaced by a vault-injected path (`scripts/vault-exec.py` is the local half) |
+| 1 | Buffer read-only discovery | **COMPLETE — LIVE VALIDATED** (2026-09-20) | `scripts/vault-exec.py` + `scripts/buffer-discovery.mjs`; four keys verified against `account.email`, isolation PASS, ids in `distribution/config/buffer-discovery.json`, report in `docs/BUFFER_DISCOVERY_REPORT.md`. Finding: **zero social channels — the social accounts do not exist yet.** |
+| 2 | Production gap audit | **COMPLETE** (2026-09-20) | `docs/reviews/PRODUCTION_GAP_AUDIT.md` — 36 capabilities classified, table parsed by `tests/test_phase_ledger.py` |
+| 3 | Production infrastructure | **COMPLETE — LIVE VALIDATED** (2026-09-20) | Worker `creator-network-state` + D1 `fe891a54…` deployed, migration applied, bearer in vault, `state/proof/state-worker-smoke.json`; `land` redeploys it. R2/KV deliberately not created until Phase 9 needs them |
+| 4 | Cloud credential provisioning | NOT STARTED | 0 GitHub secrets/variables; the documented plaintext `secrets/creator-network.env` path contradicts the vault contract and must be replaced by a vault → `gh secret set` path (`scripts/vault-exec.py` is the local half) |
 | 5 | Employee completion | PARTIAL | contracts exist; memory empty; `knowledge/` is a README; three `public_email` values are placeholders |
 | 6 | Intelligence + content engine | PARTIAL | router/QA policy/budget governor/freshness are unit-tested; the runtime INTELLIGENCE step performs no research, builds no evidence pack, never consults the budget governor; model ids unset |
 | 7 | Visual identities | PARTIAL | IDENTITY/VOICE JSON for all four; every canonical reference slot is empty |
@@ -27,10 +27,10 @@ This ledger uses the **15-phase production-completion numbering** from the 2026-
 | 15 | Hands-off certification | NOT STARTED | — |
 
 ## Current phase
-Phase 1 delivered. **Next required phase: 2 (gap audit table in-repo) folded into 3 (production infrastructure)** — the D1/Worker durable-state backend is the dependency for 11, 12 and 13.
+Phases 1–3 delivered. **Next required phase: 4 (vault → GitHub secrets/variables)** so the Actions lanes stop running inert; then 7 (identities) ahead of the social-account signup kit.
 
 ## Named stops (owner-only)
-- **Connect social channels to each Buffer account.** Discovery found 0 channels on all four accounts. Connecting Instagram/Threads/X/TikTok/YouTube is an OAuth flow inside each creator's Buffer login; the API cannot do it. Phases 10 and 14 cannot be live-validated until at least one channel exists per creator.
+- **The creators' social accounts do not exist yet** (owner, 2026-09-20), so no Buffer channels exist. Signup needs SMS/CAPTCHA on real hardware and automating it would flag the accounts at birth. Sequence: Phase 7 produces approved avatars → a per-creator signup kit (handle, bio, link, avatar, which creator email) → owner signs up and connects each channel in Buffer → re-run `scripts/buffer-discovery.mjs`. Phases 10 and 14 wait on this; nothing else does.
 
 ## Permanent repository boundary
 Creator Network may READ portfolio repositories for product knowledge. It MUST NOT mutate them. Any future downstream mutation requires a separate owner-approved project.

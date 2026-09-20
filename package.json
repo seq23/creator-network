@@ -8,6 +8,9 @@
   "scripts": {
     "test": "python3 -m unittest discover -s tests -p 'test_*.py' && node tests/test_phase3.js && node tests/test_phase4.js && node tests/test_phase5.mjs && node tests/test_phase6.mjs && node tests/test_phase7.mjs && node tests/test_phase8.mjs && node tests/test_production_hardening.mjs && node tests/test_buffer_discovery.mjs",
     "check": "find . -type f \\( -name '*.js' -o -name '*.mjs' \\) -not -path './node_modules/*' -print0 | xargs -0 -n1 node --check",
-    "release:prepush:local": "printf 'release:prepush profile: LOCAL\\n' && npm run check && npm test"
+    "release:prepush:local": "printf 'release:prepush profile: LOCAL\\n' && npm run check && npm test",
+    "deploy:state": "npx wrangler@4.76.0 deploy --config cloudflare/state-worker/wrangler.toml",
+    "secret:state": "python3 scripts/vault-exec.py -- sh -c 'printf %s \"$CREATOR_STATE_API_TOKEN\" | npx wrangler@4.76.0 secret put STATE_API_TOKEN --config cloudflare/state-worker/wrangler.toml'",
+    "smoke:state": "python3 scripts/vault-exec.py -- node scripts/state-smoke.mjs"
   }
 }
