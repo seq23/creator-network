@@ -25,6 +25,7 @@ class Phase2(unittest.TestCase):
   self.assertIn('must not be modified',t)
  def test_phase_ledger_truth(self):
   t=(ROOT/'authority/PHASE_LEDGER.md').read_text()
-  self.assertIn('Phase 2A',t)
-  self.assertIn('downstream repository mutation is not claimed',t)
+  self.assertIn('Attribution Architecture — deferred',t)
+  self.assertIn('Conversion attribution is a separate deferred project',t)
+  self.assertIn('Deferred Conversion Attribution Integration — separate future project, separate approval',t)
 if __name__=='__main__': unittest.main()

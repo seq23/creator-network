@@ -1,4 +1,4 @@
 import fs from 'node:fs'; import {assessReadiness} from './lib/readiness.mjs'; import {runNetworkDay} from './lib/orchestrator.mjs'; import {atomicWriteJson} from './lib/state.mjs';
 const root=process.cwd(); const policy=JSON.parse(fs.readFileSync('launch/config/policy.json')); const accounts=JSON.parse(fs.readFileSync('distribution/config/accounts.json'));
 const employees=['marcus_vale','nia_brooks','camille_rose','maya_reyes'].map(creator_id=>({creator_id})); const readiness=assessReadiness({root,policy,accounts});
-const result=await runNetworkDay({employees,readiness}); const receipt={at:new Date().toISOString(),readiness,result}; atomicWriteJson('state/launch/latest.json',receipt); console.log(JSON.stringify(receipt,null,2)); if(process.env.REQUIRE_LIVE_READY==='true'&&readiness.status!=='READY') process.exitCode=2;
+const result=await runNetworkDay({employees,readiness}); const receipt={at:new Date().toISOString(),readiness,result}; atomicWriteJson(process.env.LAUNCH_STATE_FILE||'state/launch/latest.json',receipt); console.log(JSON.stringify(receipt,null,2)); if(process.env.REQUIRE_LIVE_READY==='true'&&readiness.status!=='READY') process.exitCode=2;
