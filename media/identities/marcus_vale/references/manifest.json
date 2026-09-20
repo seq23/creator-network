@@ -1,0 +1,155 @@
+{
+  "creator_id": "marcus_vale",
+  "slots": {
+    "face_front": {
+      "file": "face_front.png",
+      "sha256": "a5e8fe15d2e066915bea8e4d7898b0ac545615e15fa50f5fef68346e433dca29",
+      "bytes": 1587202,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:05:16.092Z",
+      "derived_from": null,
+      "prompt": "head-and-shoulders portrait, facing camera directly, direct eye contact, neutral-warm expression, mouth closed. A Black (African-American) man, age 34, deep brown skin, low fade with short natural waves; neat short beard. strong jaw, calm intense eyes, lean athletic build (not bodybuilder), visible pores and natural skin texture. polished modern operator; athletic but believable; understated premium casualwear. Wearing charcoal tee and overshirt. Setting: quarter-zip or overshirt; early-morning home office / city walk. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, natural skin texture with visible pores, realistic and believable, not a model, not airbrushed. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed, model-perfect symmetry. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 260,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 260
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 2016
+      }
+    },
+    "face_left": {
+      "file": "face_left.png",
+      "sha256": "148cfc405efe2e32f3548d1fc824fce308b06d1b595377cb81e38f13dcdd905d",
+      "bytes": 1564636,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:05:58.436Z",
+      "derived_from": "face_front.png",
+      "prompt": "same person, head turned about 35 degrees to their left (camera sees their right side), eyes toward camera. A Black (African-American) man, age 34, deep brown skin, low fade with short natural waves; neat short beard. strong jaw, calm intense eyes, lean athletic build (not bodybuilder), visible pores and natural skin texture. polished modern operator; athletic but believable; understated premium casualwear. Wearing charcoal tee and overshirt. Setting: quarter-zip or overshirt; early-morning home office / city walk. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, natural skin texture with visible pores, realistic and believable, not a model, not airbrushed. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed, model-perfect symmetry. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 1284,
+        "input_tokens_details": {
+          "image_tokens": 1024,
+          "text_tokens": 260
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 3040
+      }
+    },
+    "face_right": {
+      "file": "face_right.png",
+      "sha256": "5d9900ec06e6f8acded5e81bdc2c0682082cd29862207bb4aeef287982d20b5a",
+      "bytes": 1610354,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:06:34.871Z",
+      "derived_from": "face_front.png",
+      "prompt": "same person, head turned about 35 degrees to their right (camera sees their left side), eyes toward camera. A Black (African-American) man, age 34, deep brown skin, low fade with short natural waves; neat short beard. strong jaw, calm intense eyes, lean athletic build (not bodybuilder), visible pores and natural skin texture. polished modern operator; athletic but believable; understated premium casualwear. Wearing charcoal tee and overshirt. Setting: quarter-zip or overshirt; early-morning home office / city walk. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, natural skin texture with visible pores, realistic and believable, not a model, not airbrushed. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed, model-perfect symmetry. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 1284,
+        "input_tokens_details": {
+          "image_tokens": 1024,
+          "text_tokens": 260
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 3040
+      }
+    },
+    "face_smile": {
+      "file": "face_smile.png",
+      "sha256": "1a41d6dbdb334d8a20fda2d55605658c7282190d8b0054f11dffde7d6e06303a",
+      "bytes": 1626191,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:07:08.757Z",
+      "derived_from": "face_front.png",
+      "prompt": "same person, facing camera, genuine warm smile showing teeth, eyes crinkled. A Black (African-American) man, age 34, deep brown skin, low fade with short natural waves; neat short beard. strong jaw, calm intense eyes, lean athletic build (not bodybuilder), visible pores and natural skin texture. polished modern operator; athletic but believable; understated premium casualwear. Wearing charcoal tee and overshirt. Setting: quarter-zip or overshirt; early-morning home office / city walk. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, natural skin texture with visible pores, realistic and believable, not a model, not airbrushed. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed, model-perfect symmetry. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 1278,
+        "input_tokens_details": {
+          "image_tokens": 1024,
+          "text_tokens": 254
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 3034
+      }
+    },
+    "face_neutral": {
+      "file": "face_neutral.png",
+      "sha256": "6fb1e8a6a9328c23ea57e98e67817b8c5d5708119227856b6d50ed815c2f4b11",
+      "bytes": 1594447,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:08:44.349Z",
+      "derived_from": "face_front.png",
+      "prompt": "same person, facing camera, relaxed neutral resting expression, mouth closed, calm. A Black (African-American) man, age 34, deep brown skin, low fade with short natural waves; neat short beard. strong jaw, calm intense eyes, lean athletic build (not bodybuilder), visible pores and natural skin texture. polished modern operator; athletic but believable; understated premium casualwear. Wearing charcoal tee and overshirt. Setting: quarter-zip or overshirt; early-morning home office / city walk. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, natural skin texture with visible pores, realistic and believable, not a model, not airbrushed. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed, model-perfect symmetry. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 1277,
+        "input_tokens_details": {
+          "image_tokens": 1024,
+          "text_tokens": 253
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 3033
+      }
+    },
+    "body": {
+      "file": "body.png",
+      "sha256": "5dbce8a027fa5db2b890aee3a5b85146a9225f99923989327e7fd82cd8018f11",
+      "bytes": 1378510,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:09:19.512Z",
+      "derived_from": "face_front.png",
+      "prompt": "same person, three-quarter body shot from mid-thigh up, standing, hands relaxed, same wardrobe, same environment. A Black (African-American) man, age 34, deep brown skin, low fade with short natural waves; neat short beard. strong jaw, calm intense eyes, lean athletic build (not bodybuilder), visible pores and natural skin texture. polished modern operator; athletic but believable; understated premium casualwear. Wearing charcoal tee and overshirt. Setting: quarter-zip or overshirt; early-morning home office / city walk. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, natural skin texture with visible pores, realistic and believable, not a model, not airbrushed. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed, model-perfect symmetry. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 1285,
+        "input_tokens_details": {
+          "image_tokens": 1024,
+          "text_tokens": 261
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 3041
+      }
+    }
+  },
+  "owner_approved": {
+    "at": "2026-09-20T22:36:34Z",
+    "by": "owner",
+    "via": "contact sheet, AskUserQuestion, all four rows selected",
+    "sheet_sha256": "ecb222f5b1aa7d72a52d088f330dfdf08ef98ffc4655f0bae8bd9a383aca7397"
+  }
+}

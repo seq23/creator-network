@@ -14,6 +14,7 @@
     "smoke:state": "python3 scripts/vault-exec.py -- node scripts/state-smoke.mjs",
     "secrets:github": "python3 scripts/vault-exec.py -- sh scripts/github-secrets.sh",
     "vars:github": "sh scripts/github-variables.sh",
-    "probe:actions": "python3 scripts/vault-exec.py -- node scripts/actions-state-probe.mjs"
+    "probe:actions": "python3 scripts/vault-exec.py -- node scripts/actions-state-probe.mjs",
+    "identities:generate": "python3 scripts/vault-exec.py -- node scripts/identity-references.mjs"
   }
 }

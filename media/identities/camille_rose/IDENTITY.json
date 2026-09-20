@@ -6,7 +6,7 @@
     "presentation_age": "29",
     "presentation_gender": "female",
     "appearance_direction": "warm organized wedding-planning creative; polished but not bridal-model perfection",
-    "identity_lock": "Same fictional person across every asset; preserve face geometry, skin tone, hair, age presentation, and body proportions."
+    "identity_lock": "Same fictional person across every asset; preserve face geometry, skin tone, hair, age presentation, and body proportions. Casting block is the source of ethnicity, skin tone and hair."
   },
   "reference_slots": {
     "face_front": "references/face_front.png",
@@ -35,7 +35,19 @@
     "plastic skin",
     "text artifacts",
     "brand logos unless approved",
-    "luxury wealth flex unless explicitly approved"
+    "luxury wealth flex unless explicitly approved",
+    "plastic skin / airbrushed",
+    "model-perfect symmetry"
   ],
-  "disclosure": "Synthetic/virtual creator; do not fabricate real-world biography, credentials, customer history, or personal experiences."
+  "disclosure": "Synthetic/virtual creator; do not fabricate real-world biography, credentials, customer history, or personal experiences.",
+  "casting": {
+    "rule": "Four creators, four different backgrounds \u2014 Black, mixed, white, Latina \u2014 each stated in every prompt, never left to model defaults (owner rule, 2026-09-20)",
+    "ethnicity": "White (American)",
+    "skin_tone": "fair with warm undertone, light freckles",
+    "hair": "honey-blonde sleek low bun (alternate: soft waves)",
+    "features": "soft features, easy genuine smile, organised calm; one delicate necklace",
+    "glasses": null,
+    "signature": "tailored neutrals (cream, sage, camel); bright studio with florals in soft focus",
+    "research": "docs/PHASE7_CASTING_RESEARCH.md#camille-rose"
+  }
 }

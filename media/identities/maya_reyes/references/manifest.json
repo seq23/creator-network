@@ -1,0 +1,155 @@
+{
+  "creator_id": "maya_reyes",
+  "slots": {
+    "face_front": {
+      "file": "face_front.png",
+      "sha256": "8f53c97f270db3bba4370a2bfbca99997df6b31d71df903d4cdd2c912277b6ff",
+      "bytes": 1538595,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:32:13.777Z",
+      "derived_from": null,
+      "prompt": "head-and-shoulders portrait, facing camera directly, direct eye contact, neutral-warm expression, mouth closed. A Latina (Mexican-American) woman, age 26, warm medium tan skin, long dark brown glossy loose waves. high cheekbones, defined brows, full lips, luminous skin, striking symmetrical face, slim tall frame; big-sister warmth in the eyes. smart research-oriented explainer with an editorial, model-like polish; striking but approachable. Wearing simple blouse. Setting: fitted soft blazer over a ribbed crew neck; clean desk with notes and a lamp, editorial lighting. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, editorial fashion-campaign polish, flawless luminous skin, model-like beauty, still photorealistic with fine skin texture. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 269,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 269
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 2025
+      }
+    },
+    "face_left": {
+      "file": "face_left.png",
+      "sha256": "d02d8d57225420af18d027989360374cdcbb3a6c747c13ff3c5a0020febbf30b",
+      "bytes": 1535723,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:32:49.153Z",
+      "derived_from": "face_front.png",
+      "prompt": "same person, head turned about 35 degrees to their left (camera sees their right side), eyes toward camera. A Latina (Mexican-American) woman, age 26, warm medium tan skin, long dark brown glossy loose waves. high cheekbones, defined brows, full lips, luminous skin, striking symmetrical face, slim tall frame; big-sister warmth in the eyes. smart research-oriented explainer with an editorial, model-like polish; striking but approachable. Wearing simple blouse. Setting: fitted soft blazer over a ribbed crew neck; clean desk with notes and a lamp, editorial lighting. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, editorial fashion-campaign polish, flawless luminous skin, model-like beauty, still photorealistic with fine skin texture. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 1293,
+        "input_tokens_details": {
+          "image_tokens": 1024,
+          "text_tokens": 269
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 3049
+      }
+    },
+    "face_right": {
+      "file": "face_right.png",
+      "sha256": "1f24e3645b065f017efc0a57ce46df24aafb1bed221aaf6dc065ebf0cdc024a9",
+      "bytes": 1469591,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:33:25.376Z",
+      "derived_from": "face_front.png",
+      "prompt": "same person, head turned about 35 degrees to their right (camera sees their left side), eyes toward camera. A Latina (Mexican-American) woman, age 26, warm medium tan skin, long dark brown glossy loose waves. high cheekbones, defined brows, full lips, luminous skin, striking symmetrical face, slim tall frame; big-sister warmth in the eyes. smart research-oriented explainer with an editorial, model-like polish; striking but approachable. Wearing simple blouse. Setting: fitted soft blazer over a ribbed crew neck; clean desk with notes and a lamp, editorial lighting. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, editorial fashion-campaign polish, flawless luminous skin, model-like beauty, still photorealistic with fine skin texture. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 1293,
+        "input_tokens_details": {
+          "image_tokens": 1024,
+          "text_tokens": 269
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 3049
+      }
+    },
+    "face_smile": {
+      "file": "face_smile.png",
+      "sha256": "1ed0f749cb723763d01cb23536ebb238f44d8760a50de7c0e72a2a74ed5c4665",
+      "bytes": 1545709,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:34:01.320Z",
+      "derived_from": "face_front.png",
+      "prompt": "same person, facing camera, genuine warm smile showing teeth, eyes crinkled. A Latina (Mexican-American) woman, age 26, warm medium tan skin, long dark brown glossy loose waves. high cheekbones, defined brows, full lips, luminous skin, striking symmetrical face, slim tall frame; big-sister warmth in the eyes. smart research-oriented explainer with an editorial, model-like polish; striking but approachable. Wearing simple blouse. Setting: fitted soft blazer over a ribbed crew neck; clean desk with notes and a lamp, editorial lighting. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, editorial fashion-campaign polish, flawless luminous skin, model-like beauty, still photorealistic with fine skin texture. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 1287,
+        "input_tokens_details": {
+          "image_tokens": 1024,
+          "text_tokens": 263
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 3043
+      }
+    },
+    "face_neutral": {
+      "file": "face_neutral.png",
+      "sha256": "8c4176b97efd40828b5f6af1d2c4a513fefa9a047f39d5277e0aaac6864b8f08",
+      "bytes": 1541206,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:34:36.426Z",
+      "derived_from": "face_front.png",
+      "prompt": "same person, facing camera, relaxed neutral resting expression, mouth closed, calm. A Latina (Mexican-American) woman, age 26, warm medium tan skin, long dark brown glossy loose waves. high cheekbones, defined brows, full lips, luminous skin, striking symmetrical face, slim tall frame; big-sister warmth in the eyes. smart research-oriented explainer with an editorial, model-like polish; striking but approachable. Wearing simple blouse. Setting: fitted soft blazer over a ribbed crew neck; clean desk with notes and a lamp, editorial lighting. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, editorial fashion-campaign polish, flawless luminous skin, model-like beauty, still photorealistic with fine skin texture. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 1286,
+        "input_tokens_details": {
+          "image_tokens": 1024,
+          "text_tokens": 262
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 3042
+      }
+    },
+    "body": {
+      "file": "body.png",
+      "sha256": "5b5774b329401f97cd9d7c7e4808843b43445cbdf7480028be644c87f1a84ec3",
+      "bytes": 1455080,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:35:12.410Z",
+      "derived_from": "face_front.png",
+      "prompt": "same person, three-quarter body shot from mid-thigh up, standing, hands relaxed, same wardrobe, same environment. A Latina (Mexican-American) woman, age 26, warm medium tan skin, long dark brown glossy loose waves. high cheekbones, defined brows, full lips, luminous skin, striking symmetrical face, slim tall frame; big-sister warmth in the eyes. smart research-oriented explainer with an editorial, model-like polish; striking but approachable. Wearing simple blouse. Setting: fitted soft blazer over a ribbed crew neck; clean desk with notes and a lamp, editorial lighting. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, editorial fashion-campaign polish, flawless luminous skin, model-like beauty, still photorealistic with fine skin texture. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 1294,
+        "input_tokens_details": {
+          "image_tokens": 1024,
+          "text_tokens": 270
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 3050
+      }
+    }
+  },
+  "owner_approved": {
+    "at": "2026-09-20T22:36:34Z",
+    "by": "owner",
+    "via": "contact sheet, AskUserQuestion, all four rows selected",
+    "sheet_sha256": "ecb222f5b1aa7d72a52d088f330dfdf08ef98ffc4655f0bae8bd9a383aca7397"
+  }
+}
