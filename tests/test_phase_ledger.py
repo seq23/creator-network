@@ -37,5 +37,5 @@ class GapAudit(unittest.TestCase):
    if state.strip()=='IMPLEMENTED + PROVEN': self.assertRegex(evidence,r'docs/|state/proof/|scripts/|provisioning report|readiness',f'{cap.strip()!r} claims PROVEN without a proof artifact')
  def test_state_worker_proof_is_live_validated(self):
   import json; d=json.loads((ROOT/'state/proof/state-worker-smoke.json').read_text())
-  self.assertEqual(d['status'],'LIVE_VALIDATED'); self.assertTrue(all(c['ok'] for c in d['checks'])); self.assertGreaterEqual(len(d['checks']),7)
+  self.assertEqual(d['status'],'LIVE_VALIDATED'); self.assertTrue(all(c['ok'] for c in d['checks'])); self.assertGreaterEqual(len(d['checks']),8)
 if __name__=='__main__': unittest.main()

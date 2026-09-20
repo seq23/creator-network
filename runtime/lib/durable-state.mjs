@@ -5,4 +5,5 @@ export class DurableStateClient{
  async get(key,fallback=null){try{return (await this.request(`/state/${encodeURIComponent(key)}`)).value}catch(e){if(String(e.message).startsWith('STATE_HTTP_404'))return fallback;throw e}}
  put(key,value){return this.request(`/state/${encodeURIComponent(key)}`,{method:'PUT',body:{value}})}
  receipt(value){return this.request('/receipts',{method:'POST',body:value})}
+ receipts(runId){return this.request(`/receipts/${encodeURIComponent(runId)}`)}
 }
