@@ -1,9 +1,14 @@
 name = "creator-network-state"
 main = "src/index.js"
 compatibility_date = "2026-09-20"
+account_id = "8d147e242033699dd37c6f5a451f48d2"
+workers_dev = true
+
+[observability]
+enabled = true
 
 [[d1_databases]]
 binding = "DB"
 database_name = "creator-network-state"
-database_id = "REPLACE_WITH_D1_DATABASE_ID"
+database_id = "fe891a54-7870-4c2d-b4da-ec5ea7456989"
 migrations_dir = "migrations"

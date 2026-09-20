@@ -1,5 +1,6 @@
 function json(body,status=200){return new Response(JSON.stringify(body),{status,headers:{'content-type':'application/json','cache-control':'no-store'}})}
-function auth(req,env){const h=req.headers.get('authorization')||'';return !!env.STATE_API_TOKEN && h===`Bearer ${env.STATE_API_TOKEN}`}
+// Constant-time compare: a `===` on the bearer string leaks the match length through timing.
+function auth(req,env){const h=req.headers.get('authorization')||'';if(!env.STATE_API_TOKEN)return false;const a=new TextEncoder().encode(h),b=new TextEncoder().encode(`Bearer ${env.STATE_API_TOKEN}`);if(a.byteLength!==b.byteLength)return false;return crypto.subtle.timingSafeEqual(a,b);}
 export default {async fetch(req,env){
   if(!auth(req,env)) return json({error:'unauthorized'},401);
   const u=new URL(req.url); const parts=u.pathname.split('/').filter(Boolean);

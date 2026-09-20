@@ -1,0 +1,36 @@
+{
+  "endpoint": "https://creator-network-state.seq-taylor.workers.dev",
+  "started": "2026-09-20T21:38:33.314Z",
+  "finished": "2026-09-20T21:38:34.186Z",
+  "status": "LIVE_VALIDATED",
+  "checks": [
+    {
+      "name": "unauthenticated request is refused (401)",
+      "ok": true
+    },
+    {
+      "name": "wrong token is refused (401)",
+      "ok": true
+    },
+    {
+      "name": "health reaches D1",
+      "ok": true
+    },
+    {
+      "name": "missing key returns fallback",
+      "ok": true
+    },
+    {
+      "name": "put/get round-trip, version increments",
+      "ok": true
+    },
+    {
+      "name": "receipt POST is idempotent",
+      "ok": true
+    },
+    {
+      "name": "receipt missing fields rejected (400)",
+      "ok": true
+    }
+  ]
+}

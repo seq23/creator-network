@@ -23,4 +23,19 @@ class PhaseLedger(unittest.TestCase):
   for needle in ('MUST NOT mutate','Conversion attribution is a separate deferred project','buffer-access-token','never written to the repository'): self.assertIn(needle,t)
  def test_named_stops_section_exists(self):
   t,_=self.rows(); self.assertIn('## Named stops (owner-only)',t)
+GAP_STATES={'IMPLEMENTED + PROVEN','IMPLEMENTED + UNPROVEN','PARTIAL','MISSING','BLOCKED'}
+class GapAudit(unittest.TestCase):
+ def test_every_capability_row_has_a_valid_state_and_evidence(self):
+  t=(ROOT/'docs/reviews/PRODUCTION_GAP_AUDIT.md').read_text()
+  rows=[m for m in re.findall(r'^\| ([^|#]+) \| ([^|]+) \| ([^|]+) \| ([^|]+) \|$',t,re.M) if m[0].strip() not in ('Capability','---')]
+  self.assertGreaterEqual(len(rows),30,'gap audit must classify the major capabilities, not a summary')
+  for cap,state,evidence,closes in rows:
+   self.assertIn(state.strip(),GAP_STATES,f'{cap.strip()!r}: {state.strip()!r}'); self.assertTrue(evidence.strip(),cap)
+ def test_proven_rows_name_a_live_artifact(self):
+  t=(ROOT/'docs/reviews/PRODUCTION_GAP_AUDIT.md').read_text()
+  for cap,state,evidence,_ in re.findall(r'^\| ([^|#]+) \| ([^|]+) \| ([^|]+) \| ([^|]+) \|$',t,re.M):
+   if state.strip()=='IMPLEMENTED + PROVEN': self.assertRegex(evidence,r'docs/|state/proof/|scripts/|provisioning report|readiness',f'{cap.strip()!r} claims PROVEN without a proof artifact')
+ def test_state_worker_proof_is_live_validated(self):
+  import json; d=json.loads((ROOT/'state/proof/state-worker-smoke.json').read_text())
+  self.assertEqual(d['status'],'LIVE_VALIDATED'); self.assertTrue(all(c['ok'] for c in d['checks'])); self.assertGreaterEqual(len(d['checks']),7)
 if __name__=='__main__': unittest.main()
