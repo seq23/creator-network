@@ -1,0 +1,27 @@
+{
+  "id": "kp_test",
+  "topic": "USCIS medical exam requirements",
+  "risk": "HIGH",
+  "created_at": "2026-09-20T00:00:00Z",
+  "reviewed_at": "2026-09-20T00:00:00Z",
+  "expires_at": "2099-01-01T00:00:00Z",
+  "sources": [
+    {
+      "url": "https://example.invalid/official",
+      "title": "fixture",
+      "retrieved_at": "2026-09-20T00:00:00Z"
+    }
+  ],
+  "claims": [
+    {
+      "claim": "fixture claim",
+      "source_urls": [
+        "https://example.invalid/official"
+      ],
+      "approved": true
+    }
+  ],
+  "questions": [],
+  "terminology": [],
+  "opportunities": []
+}

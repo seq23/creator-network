@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Creator Employee Contract",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "business",
+    "role",
+    "core_belief",
+    "icp_hypotheses",
+    "franchises",
+    "prohibited_claims",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "business": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "core_belief": {
+      "type": "string"
+    },
+    "icp_hypotheses": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5
+    },
+    "franchises": {
+      "type": "array",
+      "minItems": 1
+    },
+    "prohibited_claims": {
+      "type": "array"
+    },
+    "status": {
+      "type": "string"
+    }
+  }
+}

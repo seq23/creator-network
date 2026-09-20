@@ -1,0 +1,23 @@
+name: Weekly Owner Report
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 13 * * 1'
+permissions:
+  contents: read
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Generate report and optionally deliver
+        env:
+          WEEKLY_REPORT_DELIVERY_ENABLED: ${{ secrets.WEEKLY_REPORT_DELIVERY_ENABLED }}
+          WEEKLY_EMAIL_ENDPOINT: ${{ secrets.WEEKLY_EMAIL_ENDPOINT }}
+          WEEKLY_EMAIL_TOKEN: ${{ secrets.WEEKLY_EMAIL_TOKEN }}
+          WEEKLY_OWNER_EMAIL: ${{ secrets.WEEKLY_OWNER_EMAIL }}
+          WEEKLY_REPORT_FROM: ${{ secrets.WEEKLY_REPORT_FROM }}
+        run: node reporting/weekly_owner/run.mjs

@@ -1,0 +1,16 @@
+{
+  "execution_enabled": false,
+  "allowed_states": [
+    "EXPLORE",
+    "ITERATE",
+    "SCALE",
+    "HOLD",
+    "KILL"
+  ],
+  "decision_source": "future_economic_and_performance_evidence",
+  "note": "Phase 6 optimizer implemented. Live scheduled execution remains disabled until Phase 9. SCALE authorizes organic production allocation only until economic attribution exists.",
+  "implementation_phase": 6,
+  "attribution_deferred": true,
+  "paid_amplification_enabled": false,
+  "organic_allocation_enabled": true
+}

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "timezone": "America/Chicago",
+  "cadence": "weekly_monday",
+  "delivery_enabled": false,
+  "recipient_env": "WEEKLY_OWNER_EMAIL",
+  "sender_env": "WEEKLY_REPORT_FROM",
+  "email_provider": "resend_compatible_http",
+  "email_endpoint_env": "WEEKLY_EMAIL_ENDPOINT",
+  "email_token_env": "WEEKLY_EMAIL_TOKEN",
+  "require_health_audit_before_send": true,
+  "require_pipeline_reconciliation_before_send": true,
+  "healthy_claim_requires_verified_critical_checks": true,
+  "deferred_attribution_is_non_blocking": true,
+  "fail_closed_on_missing_recipient": true
+}

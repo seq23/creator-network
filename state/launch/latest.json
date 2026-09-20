@@ -1,0 +1,212 @@
+{
+  "at": "2026-09-20T20:22:43.492Z",
+  "readiness": {
+    "status": "NOT_READY",
+    "checks": [
+      {
+        "id": "portfolio_boundary",
+        "ok": true,
+        "blocking": true,
+        "detail": "portfolio repositories must remain read-only"
+      },
+      {
+        "id": "pipeline_floor",
+        "ok": true,
+        "blocking": true,
+        "detail": "coverage floor=3"
+      },
+      {
+        "id": "runtime_wired",
+        "ok": false,
+        "blocking": true,
+        "detail": "real PRECHECK→PERSIST step factory integration-tested"
+      },
+      {
+        "id": "durable_state",
+        "ok": false,
+        "blocking": true,
+        "detail": "durable state API configured; live health is checked at runtime"
+      },
+      {
+        "id": "openrouter_key",
+        "ok": false,
+        "blocking": true,
+        "detail": "OpenRouter credential configured"
+      },
+      {
+        "id": "generation_model",
+        "ok": false,
+        "blocking": true,
+        "detail": "generation model explicitly configured"
+      },
+      {
+        "id": "qa_model",
+        "ok": false,
+        "blocking": true,
+        "detail": "QA model explicitly configured"
+      },
+      {
+        "id": "high_stakes_model",
+        "ok": false,
+        "blocking": true,
+        "detail": "high-stakes model explicitly configured"
+      },
+      {
+        "id": "weekly_email",
+        "ok": false,
+        "blocking": true,
+        "detail": "weekly owner email enabled and fully configured"
+      },
+      {
+        "id": "buffer:marcus_vale",
+        "ok": false,
+        "blocking": true,
+        "detail": "marcus_vale Buffer enabled + key/org/channels configured"
+      },
+      {
+        "id": "buffer:nia_brooks",
+        "ok": false,
+        "blocking": true,
+        "detail": "nia_brooks Buffer enabled + key/org/channels configured"
+      },
+      {
+        "id": "buffer:camille_rose",
+        "ok": false,
+        "blocking": true,
+        "detail": "camille_rose Buffer enabled + key/org/channels configured"
+      },
+      {
+        "id": "buffer:maya_reyes",
+        "ok": false,
+        "blocking": true,
+        "detail": "maya_reyes Buffer enabled + key/org/channels configured"
+      },
+      {
+        "id": "identity_references",
+        "ok": false,
+        "blocking": true,
+        "detail": "approved non-placeholder creator reference assets present"
+      },
+      {
+        "id": "budget_caps",
+        "ok": false,
+        "blocking": true,
+        "detail": "hard daily/monthly production spend caps explicitly configured"
+      },
+      {
+        "id": "attribution_deferred",
+        "ok": true,
+        "blocking": false,
+        "detail": "conversion attribution intentionally deferred"
+      }
+    ],
+    "blockers": [
+      "runtime_wired",
+      "durable_state",
+      "openrouter_key",
+      "generation_model",
+      "qa_model",
+      "high_stakes_model",
+      "weekly_email",
+      "buffer:marcus_vale",
+      "buffer:nia_brooks",
+      "buffer:camille_rose",
+      "buffer:maya_reyes",
+      "identity_references",
+      "budget_caps"
+    ]
+  },
+  "result": {
+    "status": "SAFE_STANDBY",
+    "results": [
+      {
+        "creator_id": "marcus_vale",
+        "status": "SAFE_STANDBY",
+        "completed": [
+          "PRECHECK"
+        ],
+        "blocked_by": [
+          "runtime_wired",
+          "durable_state",
+          "openrouter_key",
+          "generation_model",
+          "qa_model",
+          "high_stakes_model",
+          "weekly_email",
+          "buffer:marcus_vale",
+          "buffer:nia_brooks",
+          "buffer:camille_rose",
+          "buffer:maya_reyes",
+          "identity_references",
+          "budget_caps"
+        ]
+      },
+      {
+        "creator_id": "nia_brooks",
+        "status": "SAFE_STANDBY",
+        "completed": [
+          "PRECHECK"
+        ],
+        "blocked_by": [
+          "runtime_wired",
+          "durable_state",
+          "openrouter_key",
+          "generation_model",
+          "qa_model",
+          "high_stakes_model",
+          "weekly_email",
+          "buffer:marcus_vale",
+          "buffer:nia_brooks",
+          "buffer:camille_rose",
+          "buffer:maya_reyes",
+          "identity_references",
+          "budget_caps"
+        ]
+      },
+      {
+        "creator_id": "camille_rose",
+        "status": "SAFE_STANDBY",
+        "completed": [
+          "PRECHECK"
+        ],
+        "blocked_by": [
+          "runtime_wired",
+          "durable_state",
+          "openrouter_key",
+          "generation_model",
+          "qa_model",
+          "high_stakes_model",
+          "weekly_email",
+          "buffer:marcus_vale",
+          "buffer:nia_brooks",
+          "buffer:camille_rose",
+          "buffer:maya_reyes",
+          "identity_references",
+          "budget_caps"
+        ]
+      },
+      {
+        "creator_id": "maya_reyes",
+        "status": "SAFE_STANDBY",
+        "completed": [
+          "PRECHECK"
+        ],
+        "blocked_by": [
+          "runtime_wired",
+          "durable_state",
+          "openrouter_key",
+          "generation_model",
+          "qa_model",
+          "high_stakes_model",
+          "weekly_email",
+          "buffer:marcus_vale",
+          "buffer:nia_brooks",
+          "buffer:camille_rose",
+          "buffer:maya_reyes",
+          "identity_references",
+          "budget_caps"
+        ]
+      }
+    ]
+  }
+}

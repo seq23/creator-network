@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PublishJob",
+  "type": "object",
+  "required": [
+    "id",
+    "idempotency_key",
+    "employee",
+    "experiment_id",
+    "platform",
+    "channel_id_ref",
+    "text",
+    "publish_at",
+    "state"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "idempotency_key": {
+      "type": "string"
+    },
+    "employee": {
+      "enum": [
+        "marcus_vale",
+        "nia_brooks",
+        "camille_rose",
+        "maya_reyes"
+      ]
+    },
+    "experiment_id": {
+      "type": "string"
+    },
+    "platform": {
+      "enum": [
+        "instagram",
+        "threads",
+        "twitter",
+        "tiktok",
+        "youtube"
+      ]
+    },
+    "channel_id_ref": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "media_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "publish_at": {
+      "type": "string"
+    },
+    "state": {
+      "enum": [
+        "DRAFT",
+        "RESERVED",
+        "SCHEDULED",
+        "SENT",
+        "RETRY_WAIT",
+        "QUARANTINED"
+      ]
+    },
+    "buffer_post_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "attempts": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "last_error": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

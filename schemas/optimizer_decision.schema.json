@@ -1,0 +1,5 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","title":"Optimizer Decision","type":"object",
+  "required":["experiment_id","employee_id","previous_state","next_state","score","reason_codes","economic_evidence_available","paid_amplification_allowed"],
+  "properties":{"experiment_id":{"type":"string"},"employee_id":{"type":"string"},"previous_state":{"enum":["EXPLORE","ITERATE","SCALE","HOLD","KILL"]},"next_state":{"enum":["EXPLORE","ITERATE","SCALE","HOLD","KILL"]},"score":{"type":"number","minimum":0,"maximum":1},"reason_codes":{"type":"array","items":{"type":"string"}},"economic_evidence_available":{"type":"boolean"},"paid_amplification_allowed":{"type":"boolean"},"recommended_capacity_share":{"type":"number","minimum":0,"maximum":1}},"additionalProperties":false
+}

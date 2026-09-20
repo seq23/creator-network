@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "provider": "openrouter",
+  "base_url": "https://openrouter.ai/api/v1",
+  "credential_env": "OPENROUTER_API_KEY",
+  "default_models": {
+    "generation": "configurable",
+    "qa": "configurable",
+    "research_light": "perplexity/sonar",
+    "research_current": "perplexity/sonar-pro",
+    "research_high_stakes": "configurable_current_research_model"
+  },
+  "rule": "model IDs are configuration, never business-logic constants; HIGH_STAKES model must be explicitly configured before live use"
+}

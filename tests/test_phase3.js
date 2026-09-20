@@ -1,0 +1,17 @@
+const assert=require('assert');
+const {classify}=require('../intelligence/lib/research-router');
+const {canReserve}=require('../intelligence/lib/budget-governor');
+const {check}=require('../intelligence/lib/freshness');
+const {assertAssignment}=require('../intelligence/lib/generation-guard');
+const {duplicateRisk}=require('../intelligence/lib/continuity');
+const {decide}=require('../intelligence/lib/qa-policy');
+assert.equal(classify({employeeId:'maya_reyes',topic:'USCIS medical exam requirements'}),'HIGH_STAKES');
+assert.equal(classify({topic:'evergreen planning',approvedEvergreen:true}),'NONE');
+assert.equal(canReserve({live_spend_enabled:false,daily_spend_usd:0,monthly_spend_usd:0},{daily_cap:.5,monthly_cap:10},.1).reason,'LIVE_SPEND_DISABLED');
+assert.equal(canReserve({live_spend_enabled:true,daily_spend_usd:.45,monthly_spend_usd:1},{daily_cap:.5,monthly_cap:10},.1).reason,'DAILY_CAP');
+assert.equal(check(null,'HIGH_STAKES').ok,false);
+assert.throws(()=>assertAssignment({id:'X',icp_id:'A',hook_family:'P',format:'D'},{experiment_id:'X',icp_id:'B',hook_family:'P',format:'D'}),/ASSIGNMENT_MUTATION/);
+assert.equal(duplicateRisk('same exact words here',['same exact words here']).duplicate,true);
+assert.equal(decide({employeeId:'maya_reyes',tier:'HIGH_STAKES',freshness:{ok:false,reason:'STALE'}}).decision,'HUMAN_REVIEW');
+assert.equal(decide({employeeId:'marcus_vale',tier:'NONE',freshness:{ok:true}}).decision,'PASS');
+console.log('phase3 tests: 9/9 PASS');

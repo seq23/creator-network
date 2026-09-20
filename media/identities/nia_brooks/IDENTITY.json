@@ -1,0 +1,41 @@
+{
+  "creator_id": "nia_brooks",
+  "name": "Nia Brooks",
+  "canonical_subject": {
+    "synthetic": true,
+    "presentation_age": "27",
+    "presentation_gender": "female",
+    "appearance_direction": "approachable young professional; expressive, practical, contemporary",
+    "identity_lock": "Same fictional person across every asset; preserve face geometry, skin tone, hair, age presentation, and body proportions."
+  },
+  "reference_slots": {
+    "face_front": "references/face_front.png",
+    "face_left": "references/face_left.png",
+    "face_right": "references/face_right.png",
+    "face_smile": "references/face_smile.png",
+    "face_neutral": "references/face_neutral.png",
+    "body": "references/body.png"
+  },
+  "wardrobe": [
+    "casual knit top",
+    "denim and clean tee",
+    "simple blazer over tee"
+  ],
+  "environments": [
+    "bright apartment desk",
+    "kitchen table with paperwork",
+    "coffee shop",
+    "apartment lobby"
+  ],
+  "negative_prompt": [
+    "celebrity likeness",
+    "real-person likeness",
+    "extra fingers",
+    "warped teeth",
+    "plastic skin",
+    "text artifacts",
+    "brand logos unless approved",
+    "luxury wealth flex unless explicitly approved"
+  ],
+  "disclosure": "Synthetic/virtual creator; do not fabricate real-world biography, credentials, customer history, or personal experiences."
+}

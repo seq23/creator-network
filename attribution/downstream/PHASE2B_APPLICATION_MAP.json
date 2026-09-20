@@ -1,0 +1,35 @@
+{
+  "mode": "read_only_downstream_inspection",
+  "mutation_performed": false,
+  "repositories": [
+    {
+      "repo": "seq23/sprylabs-hpc-site",
+      "employee": "marcus_vale",
+      "files_inspected": ["REPO_IDENTITY.md", "config/conversion_contract.json", "download.html"],
+      "integration": ["browser capture on owned pages", "creator_landing", "checkout_started before Gumroad navigation"],
+      "completion_proof": "UNVERIFIED_GUMROAD_COMPLETION_SIGNAL"
+    },
+    {
+      "repo": "seq23/approvalprep",
+      "employee": "nia_brooks",
+      "files_inspected": ["REPO_IDENTITY.md", "functions/api/create-checkout-session.js", "functions/api/stripe-webhook.js", "functions/api/track-event.js"],
+      "integration": ["Stripe checkout metadata", "verified webhook purchase_completed"],
+      "completion_proof": "IMPLEMENTATION_READY_NOT_APPLIED"
+    },
+    {
+      "repo": "seq23/dream-wedding-builder",
+      "employee": "camille_rose",
+      "files_inspected": ["REPO_IDENTITY.md", "components/CheckoutButton.tsx", "app/api/checkout/route.ts", "lib/checkout-contract.ts", "app/api/stripe-webhook/route.ts", "app/order/success/page.tsx"],
+      "integration": ["checkout form attribution", "Stripe metadata", "verified webhook purchase_completed"],
+      "completion_proof": "IMPLEMENTATION_READY_NOT_APPLIED"
+    },
+    {
+      "repo": "seq23/local-guides-generator",
+      "employee": "maya_reyes",
+      "canonical_hosts": ["uscisexam.com", "theaccidentguides.com", "dentistryguides.com", "hormonesivhair.com", "neuroevalguides.com"],
+      "files_inspected": ["REPO_IDENTITY.md", "templates/partials/primary_conversion_cta.html", "templates/partials/inline_conversion_cta.html", "scripts/build_city_sites.js", "scripts/helpers/buyouts.js", "scripts/validation/conversion_contract.js", "data/buyouts.json"],
+      "integration": ["generator/template browser capture", "lead_started on existing CTA context", "qualified_lead only from verified completion/handoff"],
+      "completion_proof": "LEAD_COMPLETION_SURFACE_NOT_PROVEN_FROM_INSPECTED_FILES"
+    }
+  ]
+}

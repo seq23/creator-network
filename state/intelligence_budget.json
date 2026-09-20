@@ -1,0 +1,8 @@
+{
+  "date": "UNSET",
+  "month": "UNSET",
+  "daily_spend_usd": 0,
+  "monthly_spend_usd": 0,
+  "reservations": [],
+  "live_spend_enabled": false
+}

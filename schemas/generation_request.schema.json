@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "employee",
+    "experiment",
+    "product_knowledge",
+    "approved_facts",
+    "recent_content",
+    "performance",
+    "platform"
+  ],
+  "properties": {
+    "employee": {},
+    "experiment": {},
+    "product_knowledge": {},
+    "approved_facts": {},
+    "recent_content": {},
+    "performance": {},
+    "platform": {}
+  }
+}

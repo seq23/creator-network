@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Health State",
+  "type": "object",
+  "required": [
+    "overall",
+    "checks"
+  ],
+  "properties": {
+    "overall": {
+      "enum": [
+        "HEALTHY",
+        "DEGRADED",
+        "ACTION_REQUIRED",
+        "UNVERIFIED"
+      ]
+    },
+    "checks": {
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "provider": "buffer",
+  "api_endpoint": "https://api.buffer.com",
+  "live_writes_enabled": false,
+  "reservation": {
+    "required_before_intelligence_or_media_spend": true,
+    "default_weekly_capacity_per_employee": 10
+  },
+  "retry": {
+    "max_attempts": 3,
+    "backoff_seconds": [
+      300,
+      1800,
+      7200
+    ],
+    "duplicate_prevention": "idempotency_key"
+  },
+  "confirmation": {
+    "required": true,
+    "success_status": "sent"
+  },
+  "supported_primary_platforms": [
+    "instagram",
+    "threads",
+    "twitter",
+    "tiktok"
+  ],
+  "secondary_platforms": [
+    "youtube"
+  ],
+  "unsafe_or_unsupported_action": "QUARANTINE"
+}

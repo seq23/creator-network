@@ -1,0 +1,44 @@
+{
+  "renderers": [
+    {
+      "id": "local_ffmpeg",
+      "kind": "assembly",
+      "cost_class": "free",
+      "enabled": true,
+      "capabilities": [
+        "EDITED_SOCIAL"
+      ]
+    },
+    {
+      "id": "http_talking_avatar",
+      "kind": "external_http",
+      "cost_class": "paid_or_metered",
+      "enabled": false,
+      "capabilities": [
+        "TALKING_CREATOR"
+      ],
+      "env": [
+        "TALKING_AVATAR_API_URL",
+        "TALKING_AVATAR_API_KEY"
+      ]
+    },
+    {
+      "id": "http_image_video",
+      "kind": "external_http",
+      "cost_class": "paid_or_metered",
+      "enabled": false,
+      "capabilities": [
+        "CREATOR_LIFESTYLE"
+      ],
+      "env": [
+        "IMAGE_VIDEO_API_URL",
+        "IMAGE_VIDEO_API_KEY"
+      ]
+    }
+  ],
+  "vendor_bakeoff_candidates": [
+    "owner-selected current talking-avatar provider",
+    "owner-selected current image-to-video provider"
+  ],
+  "note": "Vendor names/endpoints are deliberately not hard-coded. Current provider APIs/pricing are selected during bake-off and configured without changing orchestration."
+}

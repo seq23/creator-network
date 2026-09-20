@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "phase": "4",
+  "live_paid_rendering_enabled": false,
+  "network_media_budget_usd": 0,
+  "spent_usd": 0,
+  "jobs": [],
+  "bakeoff_status": "NOT_RUN",
+  "canonical_face_references_populated": false
+}

@@ -1,0 +1,2 @@
+const limits={twitter:280,threads:500,instagram:2200,tiktok:2200,youtube:5000};
+export function platformVariant(base,platform){const max=limits[platform];if(!max) throw new Error('UNSUPPORTED_PLATFORM');const text=String(base.caption||base.text||'').trim();if(!text) throw new Error('EMPTY_CONTENT');return {platform,text:text.length<=max?text:text.slice(0,Math.max(0,max-1)).trimEnd()+'…',media_url:base.media_url||null};}

@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {reserveSlot} from '../distribution/lib/slots.mjs';
+import {publishIdempotencyKey,isDuplicate} from '../distribution/lib/idempotency.mjs';
+import {transition} from '../distribution/lib/job-state.mjs';
+import {platformVariant} from '../distribution/lib/variants.mjs';
+import {scheduleJob} from '../distribution/lib/publisher.mjs';
+import {BufferClient} from '../distribution/buffer/client.mjs';
+let s={reservations:[]};let r=reserveSlot(s,'marcus_vale','instagram','2026-09-21T15:00:00Z',1);assert.equal(r.ok,true);s=r.state;assert.equal(reserveSlot(s,'marcus_vale','threads','2026-09-21T16:00:00Z',1).ok,false);
+const key=publishIdempotencyKey({employee:'marcus_vale',experiment_id:'APM-R-01',platform:'instagram',publish_at:'x'});assert.equal(key.length,64);assert.equal(isDuplicate({jobs:[{idempotency_key:key,state:'SCHEDULED'}]},key),true);
+assert.throws(()=>transition({state:'DRAFT'},'SENT'));assert.equal(platformVariant({caption:'x'.repeat(400)},'twitter').text.length,280);
+const q=[];const fakeFetch=async(u,o)=>{q.push(JSON.parse(o.body).query);return {ok:true,json:async()=>({data:{createPost:{post:{id:'p1',text:'hi',dueAt:'2026-09-21T15:00:00Z',channelId:'c1'}}}})}};const c=new BufferClient({apiKey:'test',fetchImpl:fakeFetch});assert.equal((await c.schedule({channelId:'c1',text:'hi',dueAt:'2026-09-21T15:00:00Z'})).id,'p1');assert.match(q[0],/customScheduled/);
+let job={state:'RESERVED',text:'hi',publish_at:'2026-09-21T15:00:00Z',attempts:0};assert.equal((await scheduleJob({job,client:c,channelId:'c1',liveWritesEnabled:false})).state,'QUARANTINED');
+console.log('Phase 5 behavioral tests: 7/7 PASS');

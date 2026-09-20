@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "job_id",
+    "creator_id",
+    "experiment_id",
+    "mode",
+    "script",
+    "status"
+  ],
+  "properties": {
+    "job_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "creator_id": {
+      "enum": [
+        "marcus_vale",
+        "nia_brooks",
+        "camille_rose",
+        "maya_reyes"
+      ]
+    },
+    "experiment_id": {
+      "type": "string"
+    },
+    "mode": {
+      "enum": [
+        "TALKING_CREATOR",
+        "CREATOR_LIFESTYLE",
+        "EDITED_SOCIAL"
+      ]
+    },
+    "script": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "QUEUED",
+        "BLOCKED",
+        "READY",
+        "RENDERING",
+        "RENDERED",
+        "FAILED",
+        "QUARANTINED"
+      ]
+    },
+    "estimated_cost_usd": {
+      "type": "number",
+      "minimum": 0
+    },
+    "actual_cost_usd": {
+      "type": "number",
+      "minimum": 0
+    },
+    "renderer_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "output_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

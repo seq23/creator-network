@@ -1,0 +1,54 @@
+{
+  "marcus_vale": {
+    "provider": "buffer",
+    "credential_ref": "env:BUFFER_API_KEY_MARCUS_VALE",
+    "organization_id_ref": "env:BUFFER_ORG_ID_MARCUS_VALE",
+    "channels": {
+      "instagram": "env:BUFFER_CHANNEL_MARCUS_VALE_INSTAGRAM",
+      "threads": "env:BUFFER_CHANNEL_MARCUS_VALE_THREADS",
+      "twitter": "env:BUFFER_CHANNEL_MARCUS_VALE_X",
+      "tiktok": "env:BUFFER_CHANNEL_MARCUS_VALE_TIKTOK",
+      "youtube": "env:BUFFER_CHANNEL_MARCUS_VALE_YOUTUBE"
+    },
+    "enabled": false
+  },
+  "nia_brooks": {
+    "provider": "buffer",
+    "credential_ref": "env:BUFFER_API_KEY_NIA_BROOKS",
+    "organization_id_ref": "env:BUFFER_ORG_ID_NIA_BROOKS",
+    "channels": {
+      "instagram": "env:BUFFER_CHANNEL_NIA_BROOKS_INSTAGRAM",
+      "threads": "env:BUFFER_CHANNEL_NIA_BROOKS_THREADS",
+      "twitter": "env:BUFFER_CHANNEL_NIA_BROOKS_X",
+      "tiktok": "env:BUFFER_CHANNEL_NIA_BROOKS_TIKTOK",
+      "youtube": "env:BUFFER_CHANNEL_NIA_BROOKS_YOUTUBE"
+    },
+    "enabled": false
+  },
+  "camille_rose": {
+    "provider": "buffer",
+    "credential_ref": "env:BUFFER_API_KEY_CAMILLE_ROSE",
+    "organization_id_ref": "env:BUFFER_ORG_ID_CAMILLE_ROSE",
+    "channels": {
+      "instagram": "env:BUFFER_CHANNEL_CAMILLE_ROSE_INSTAGRAM",
+      "threads": "env:BUFFER_CHANNEL_CAMILLE_ROSE_THREADS",
+      "twitter": "env:BUFFER_CHANNEL_CAMILLE_ROSE_X",
+      "tiktok": "env:BUFFER_CHANNEL_CAMILLE_ROSE_TIKTOK",
+      "youtube": "env:BUFFER_CHANNEL_CAMILLE_ROSE_YOUTUBE"
+    },
+    "enabled": false
+  },
+  "maya_reyes": {
+    "provider": "buffer",
+    "credential_ref": "env:BUFFER_API_KEY_MAYA_REYES",
+    "organization_id_ref": "env:BUFFER_ORG_ID_MAYA_REYES",
+    "channels": {
+      "instagram": "env:BUFFER_CHANNEL_MAYA_REYES_INSTAGRAM",
+      "threads": "env:BUFFER_CHANNEL_MAYA_REYES_THREADS",
+      "twitter": "env:BUFFER_CHANNEL_MAYA_REYES_X",
+      "tiktok": "env:BUFFER_CHANNEL_MAYA_REYES_TIKTOK",
+      "youtube": "env:BUFFER_CHANNEL_MAYA_REYES_YOUTUBE"
+    },
+    "enabled": false
+  }
+}

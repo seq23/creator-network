@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "attribution_deferred": true,
+  "supported_platforms": ["tiktok", "instagram", "x", "threads", "youtube_shorts"],
+  "canonical_metrics": ["impressions", "views", "reach", "likes", "comments", "shares", "saves", "clicks", "watch_time_seconds", "video_duration_seconds", "followers_gained"],
+  "derived_metrics": ["engagement_rate", "click_rate", "completion_proxy", "intent_rate"],
+  "economic_metrics": ["revenue", "purchases", "qualified_leads", "economic_value"],
+  "economic_metrics_status": "UNAVAILABLE_UNTIL_DEFERRED_ATTRIBUTION_PROJECT",
+  "rules": {
+    "never_treat_engagement_as_revenue": true,
+    "never_infer_missing_zero": true,
+    "stale_after_hours": 72,
+    "minimum_impressions_for_decision": 250,
+    "minimum_posts_for_decision": 2
+  }
+}

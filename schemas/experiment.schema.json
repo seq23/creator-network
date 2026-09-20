@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Experiment",
+  "type": "object",
+  "required": [
+    "id",
+    "creator_id",
+    "business",
+    "hypothesis_code",
+    "hook_family",
+    "format",
+    "lifecycle",
+    "batch"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "creator_id": {
+      "type": "string"
+    },
+    "business": {
+      "type": "string"
+    },
+    "hypothesis_code": {
+      "type": "string"
+    },
+    "hook_family": {
+      "enum": [
+        "P",
+        "C",
+        "O"
+      ]
+    },
+    "format": {
+      "enum": [
+        "D",
+        "S"
+      ]
+    },
+    "lifecycle": {
+      "enum": [
+        "EXPLORE",
+        "ITERATE",
+        "SCALE",
+        "HOLD",
+        "KILL"
+      ]
+    },
+    "batch": {
+      "enum": [
+        1,
+        2
+      ]
+    }
+  }
+}

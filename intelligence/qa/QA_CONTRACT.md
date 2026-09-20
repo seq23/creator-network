@@ -1,0 +1,2 @@
+# Independent QA Contract
+QA is a separate pass from generation. Decisions: PASS, REVISE, HUMAN_REVIEW, REJECT. It evaluates persona consistency, factual confidence, hook strength, commercial fit, duplication risk, prohibited claims, evidence freshness, and required changes. HUMAN_REVIEW is quarantined by default and appears in reporting; it does not interrupt the owner unless a later policy explicitly escalates it. Maya/high-stakes content is fail-closed.

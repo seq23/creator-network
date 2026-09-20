@@ -1,0 +1,7 @@
+{
+  "phase": 9,
+  "mode": "SAFE_STANDBY",
+  "live_execution_enabled": false,
+  "autonomy_status": "IMPLEMENTED_PRODUCTION_GATED",
+  "next_phase": null
+}

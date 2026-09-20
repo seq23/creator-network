@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "mode": "SAFE_STANDBY",
+  "minimum_pipeline_coverage_days": 3,
+  "require_health_before_live": true,
+  "require_canonical_identity_for_face_media": true,
+  "allow_edited_social_without_face": true,
+  "require_buffer_for_live_publish": true,
+  "require_openrouter_for_live_intelligence": true,
+  "require_weekly_email_for_owner_reporting": true,
+  "conversion_attribution_launch_blocking": false,
+  "portfolio_repo_mutation_allowed": false,
+  "paid_amplification_allowed": false,
+  "max_employee_failures_before_network_halt": 4,
+  "duplicate_guard_required": true,
+  "last_known_good_required": true
+}

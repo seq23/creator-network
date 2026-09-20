@@ -1,0 +1,7 @@
+{
+  "name": "creator-network-attribution",
+  "main": "index.js",
+  "compatibility_date": "2026-09-01",
+  "d1_databases": [{"binding":"ATTRIBUTION_DB","database_name":"creator-network-attribution","database_id":"REPLACE_OUTSIDE_GIT"}],
+  "vars": {"CORS_ORIGIN":"https://REPLACE_WITH_APPROVED_ORIGIN"}
+}

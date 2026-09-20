@@ -1,0 +1,16 @@
+{
+  "creator_id": "camille_rose",
+  "direction": "fast, warm, opinionated, funny, slightly dramatic; never cruel",
+  "voice_lock": "Use one approved synthetic voice identity per creator. Do not imitate or clone a real person without explicit rights.",
+  "audio_spec": {
+    "sample_rate_hz": 48000,
+    "channels": 1,
+    "target_lufs": -16,
+    "format": "wav"
+  },
+  "prohibited": [
+    "real-person voice impersonation",
+    "unapproved accent caricature",
+    "fabricated credential claims"
+  ]
+}

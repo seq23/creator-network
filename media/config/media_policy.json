@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "modes": {
+    "TALKING_CREATOR": {
+      "priority": "premium",
+      "requires": [
+        "canonical_face_reference",
+        "approved_voice",
+        "renderer"
+      ],
+      "fallback": "EDITED_SOCIAL"
+    },
+    "CREATOR_LIFESTYLE": {
+      "priority": "standard",
+      "requires": [
+        "canonical_face_reference",
+        "renderer"
+      ],
+      "fallback": "EDITED_SOCIAL"
+    },
+    "EDITED_SOCIAL": {
+      "priority": "default_low_cost",
+      "requires": [
+        "script_or_copy"
+      ],
+      "fallback": null
+    }
+  },
+  "selection_order": [
+    "EDITED_SOCIAL",
+    "CREATOR_LIFESTYLE",
+    "TALKING_CREATOR"
+  ],
+  "premium_rule": "Use premium talking render only when experiment value justifies it; never spend merely because a renderer is available.",
+  "hard_rules": [
+    "reserve distribution capacity before paid rendering",
+    "never exceed employee or network media budget",
+    "missing canonical face reference forbids unattended face generation",
+    "renderer failure must preserve job and allow deterministic fallback",
+    "no real-person likeness or voice cloning without explicit rights"
+  ]
+}

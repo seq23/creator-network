@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "decision",
+    "persona_consistency",
+    "factual_confidence",
+    "hook_strength",
+    "commercial_fit",
+    "duplication_risk",
+    "flags",
+    "required_changes"
+  ],
+  "properties": {
+    "decision": {
+      "enum": [
+        "PASS",
+        "REVISE",
+        "HUMAN_REVIEW",
+        "REJECT"
+      ]
+    },
+    "persona_consistency": {
+      "type": "number"
+    },
+    "factual_confidence": {
+      "type": "number"
+    },
+    "hook_strength": {
+      "type": "number"
+    },
+    "commercial_fit": {
+      "type": "number"
+    },
+    "duplication_risk": {
+      "type": "number"
+    },
+    "flags": {
+      "type": "array"
+    },
+    "required_changes": {
+      "type": "array"
+    }
+  }
+}

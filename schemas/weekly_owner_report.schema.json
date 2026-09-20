@@ -1,0 +1,19 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Weekly Owner Report",
+  "type":"object",
+  "required":["period","generated_at","network_health","summary","employees","pipeline","next_week","learning","autonomous_actions","health","owner_action_required"],
+  "properties":{
+    "period":{"type":"object","required":["start","end"]},
+    "generated_at":{"type":"string"},
+    "network_health":{"enum":["HEALTHY","DEGRADED","ACTION_REQUIRED","UNVERIFIED"]},
+    "summary":{"type":"object"},
+    "employees":{"type":"array","minItems":4,"maxItems":4},
+    "pipeline":{"type":"object"},
+    "next_week":{"type":"object"},
+    "learning":{"type":"array"},
+    "autonomous_actions":{"type":"array"},
+    "health":{"type":"object"},
+    "owner_action_required":{"type":["string","array"]}
+  }
+}

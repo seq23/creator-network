@@ -1,0 +1,10 @@
+<!-- Serve creator-attribution.js from a first-party static asset path, then capture on landing. -->
+<script src="/assets/creator-attribution.js" defer></script>
+<script>
+window.addEventListener('DOMContentLoaded', async () => {
+  if (!window.CreatorAttribution) return;
+  const a = window.CreatorAttribution.capture();
+  if (!a) return;
+  try { await window.CreatorAttribution.track('https://ATTRIBUTION_HOST/v1/events','creator_landing',{path:location.pathname,referrer_host:document.referrer ? new URL(document.referrer).host : ''}); } catch (_) {}
+});
+</script>

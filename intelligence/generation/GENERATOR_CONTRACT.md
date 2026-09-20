@@ -1,0 +1,2 @@
+# Generator Contract
+Input: employee/persona contract, assigned experiment, product knowledge, approved facts/evidence, recent content, performance, platform. Output: experiment_id, icp_id, hook_family, format, thesis, hook, script, visual_plan, caption, CTA, destination, platform variants. The assigned ICP, hook family, format, and experiment ID are immutable. The generator never approves publication.

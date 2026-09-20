@@ -1,0 +1,41 @@
+{
+  "creator_id": "marcus_vale",
+  "name": "Marcus Vale",
+  "canonical_subject": {
+    "synthetic": true,
+    "presentation_age": "34",
+    "presentation_gender": "male",
+    "appearance_direction": "polished modern operator; athletic but believable; understated premium casualwear",
+    "identity_lock": "Same fictional person across every asset; preserve face geometry, skin tone, hair, age presentation, and body proportions."
+  },
+  "reference_slots": {
+    "face_front": "references/face_front.png",
+    "face_left": "references/face_left.png",
+    "face_right": "references/face_right.png",
+    "face_smile": "references/face_smile.png",
+    "face_neutral": "references/face_neutral.png",
+    "body": "references/body.png"
+  },
+  "wardrobe": [
+    "charcoal tee and overshirt",
+    "navy knit polo",
+    "black athletic quarter-zip"
+  ],
+  "environments": [
+    "clean home office",
+    "city walk",
+    "quiet coffee shop",
+    "gym recovery area"
+  ],
+  "negative_prompt": [
+    "celebrity likeness",
+    "real-person likeness",
+    "extra fingers",
+    "warped teeth",
+    "plastic skin",
+    "text artifacts",
+    "brand logos unless approved",
+    "luxury wealth flex unless explicitly approved"
+  ],
+  "disclosure": "Synthetic/virtual creator; do not fabricate real-world biography, credentials, customer history, or personal experiences."
+}

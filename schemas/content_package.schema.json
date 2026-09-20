@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Future Content Package Contract",
+  "type": "object",
+  "required": [
+    "experiment_id",
+    "creator_id",
+    "thesis",
+    "hook",
+    "script",
+    "visual_plan",
+    "caption",
+    "cta",
+    "destination",
+    "platform_variants"
+  ],
+  "properties": {
+    "experiment_id": {
+      "type": "string"
+    },
+    "creator_id": {
+      "type": "string"
+    },
+    "thesis": {
+      "type": "string"
+    },
+    "hook": {
+      "type": "string"
+    },
+    "script": {
+      "type": "string"
+    },
+    "visual_plan": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "string"
+    },
+    "destination": {
+      "type": "string"
+    },
+    "platform_variants": {
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "creator_id": "maya_reyes",
+  "currency": "USD",
+  "monthly_cap": null,
+  "research_cap": null,
+  "media_cap": null,
+  "hard_stop": true,
+  "fallback_on_exhaustion": "approved_free_or_cheap_format_or_queue",
+  "note": "Caps intentionally unset in Phase 1; no paid execution exists."
+}

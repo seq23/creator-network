@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "lifecycle": ["EXPLORE", "ITERATE", "SCALE", "HOLD", "KILL"],
+  "weights": {"attention": 0.35, "intent": 0.45, "conversion": 0.20},
+  "conversion_weight_when_unavailable": 0,
+  "organic_scale_requires": {"min_posts": 3, "min_impressions": 1000, "min_intent_rate": 0.005},
+  "kill_requires": {"min_posts": 4, "min_impressions": 1500, "max_score": 0.20},
+  "iterate_requires": {"min_posts": 2, "min_impressions": 500},
+  "paid_amplification_requires_economic_evidence": true,
+  "max_capacity_share_per_experiment": 0.25,
+  "exploration_floor_share": 0.30,
+  "hold_on_incomplete_metrics": true,
+  "hold_on_anomaly": true
+}

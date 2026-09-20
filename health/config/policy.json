@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "states": ["HEALTHY", "DEGRADED", "ACTION_REQUIRED", "UNVERIFIED"],
+  "critical_checks": ["identity", "memory", "experiment", "research", "generation", "qa", "renderer", "buffer", "publishing", "analytics", "budget", "state"],
+  "deferred_checks": ["attribution", "email"],
+  "max_recovery_attempts": 2,
+  "backoff_ms": [0, 50],
+  "rules": {
+    "unknown_failure": "ACTION_REQUIRED",
+    "human_only_failure": "ACTION_REQUIRED",
+    "recovered_failure": "DEGRADED",
+    "unproven_critical_path": "UNVERIFIED",
+    "deferred_unverified_does_not_block": true,
+    "healthy_requires_all_critical_verified": true
+  }
+}

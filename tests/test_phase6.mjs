@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import { normalizeSnapshot, derivedMetrics } from '../analytics/lib/normalize.mjs';
+import { aggregateByExperiment } from '../analytics/lib/aggregate.mjs';
+import { decide } from '../optimizer/lib/decision.mjs';
+import { allocate } from '../optimizer/lib/allocation.mjs';
+const base={snapshot_id:'s1',employee_id:'marcus_vale',experiment_id:'APM-R-01',platform:'instagram',post_id:'p1',captured_at:'2026-09-20T12:00:00Z',complete:true,metrics:{impressions:1000,likes:50,comments:10,shares:10,saves:10,clicks:10}};
+const n=normalizeSnapshot(base); assert.equal(n.metrics.views,null); console.log('PASS missing metrics stay null');
+const d=derivedMetrics(n.metrics); assert.equal(d.engagement_rate,.08); assert.equal(d.click_rate,.01); console.log('PASS derived metrics');
+assert.throws(()=>normalizeSnapshot({...base,metrics:{impressions:-1}})); console.log('PASS invalid metric rejected');
+const newer={...base,snapshot_id:'s2',captured_at:'2026-09-20T13:00:00Z',metrics:{...base.metrics,impressions:1500}};
+const agg=aggregateByExperiment([base,newer]); assert.equal(agg[0].posts,1); assert.equal(agg[0].metrics.impressions,1500); console.log('PASS latest post snapshot only');
+const scaleAgg={...agg[0],posts:3,metrics:{...agg[0].metrics,impressions:3000},derived:{engagement_rate:.08,intent_rate:.02,completion_proxy:.7},complete:true};
+const dec=decide(scaleAgg); assert.equal(dec.next_state,'SCALE'); assert.equal(dec.paid_amplification_allowed,false); assert.equal(dec.economic_evidence_available,false); console.log('PASS organic scale cannot authorize paid');
+const hold=decide({...scaleAgg,complete:false}); assert.equal(hold.next_state,'HOLD'); console.log('PASS incomplete holds');
+const kill=decide({...scaleAgg,posts:4,metrics:{impressions:2000},derived:{engagement_rate:.001,intent_rate:0,completion_proxy:.01}}); assert.equal(kill.next_state,'KILL'); console.log('PASS low signal kill after sample');
+const alloc=allocate([dec,{...dec,experiment_id:'APM-R-02',next_state:'EXPLORE',score:.1}],10); assert.equal(alloc.reduce((a,x)=>a+x.recommended_slots,0),10); assert.ok(alloc.find(x=>x.experiment_id==='APM-R-02').recommended_slots>=3); console.log('PASS exploration floor allocation');
+console.log('8/8 PASS');

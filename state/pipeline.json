@@ -1,0 +1,15 @@
+{
+  "states": [
+    "RESEARCH",
+    "SCRIPT",
+    "QA",
+    "RENDER",
+    "READY",
+    "SCHEDULED",
+    "RELEASED",
+    "FAILED",
+    "QUARANTINED"
+  ],
+  "minimum_coverage_days": null,
+  "note": "Coverage threshold to be approved before autonomous launch."
+}

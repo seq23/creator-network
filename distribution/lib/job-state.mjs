@@ -1,0 +1,2 @@
+const allowed={DRAFT:['RESERVED','QUARANTINED'],RESERVED:['SCHEDULED','RETRY_WAIT','QUARANTINED'],SCHEDULED:['SENT','RETRY_WAIT','QUARANTINED'],RETRY_WAIT:['SCHEDULED','QUARANTINED'],SENT:[],QUARANTINED:[]};
+export function transition(job,next,patch={}){if(!(allowed[job.state]||[]).includes(next)) throw new Error(`INVALID_DISTRIBUTION_TRANSITION:${job.state}->${next}`);return {...job,...patch,state:next,updated_at:new Date().toISOString()};}

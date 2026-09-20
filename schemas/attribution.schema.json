@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Creator Network Attribution Event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event",
+    "event_id",
+    "occurred_at",
+    "attribution"
+  ],
+  "properties": {
+    "event": {
+      "enum": [
+        "creator_landing",
+        "content_click",
+        "lead_started",
+        "lead_completed",
+        "email_captured",
+        "tool_started",
+        "checkout_started",
+        "purchase_completed",
+        "qualified_lead"
+      ]
+    },
+    "event_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "occurred_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "attribution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "src_creator",
+        "src_platform",
+        "src_experiment",
+        "src_icp",
+        "src_franchise",
+        "src_cta"
+      ],
+      "properties": {
+        "src_creator": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "src_platform": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "src_experiment": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "src_icp": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "src_franchise": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "src_cta": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        }
+      }
+    },
+    "properties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "destination": {
+          "type": "string",
+          "maxLength": 300
+        },
+        "session_id": {
+          "type": "string",
+          "maxLength": 300
+        },
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "currency": {
+          "type": "string",
+          "maxLength": 16
+        },
+        "product": {
+          "type": "string",
+          "maxLength": 300
+        },
+        "vertical": {
+          "type": "string",
+          "maxLength": 300
+        },
+        "path": {
+          "type": "string",
+          "maxLength": 300
+        },
+        "referrer_host": {
+          "type": "string",
+          "maxLength": 300
+        }
+      }
+    }
+  }
+}

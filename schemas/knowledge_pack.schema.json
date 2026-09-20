@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "id",
+    "topic",
+    "risk",
+    "reviewed_at",
+    "expires_at",
+    "sources",
+    "claims"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "topic": {
+      "type": "string"
+    },
+    "risk": {
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH"
+      ]
+    },
+    "reviewed_at": {
+      "type": "string"
+    },
+    "expires_at": {
+      "type": "string"
+    },
+    "sources": {
+      "type": "array"
+    },
+    "claims": {
+      "type": "array"
+    },
+    "questions": {
+      "type": "array"
+    },
+    "terminology": {
+      "type": "array"
+    },
+    "opportunities": {
+      "type": "array"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "currency": "USD",
+  "daily_cap": 0.5,
+  "monthly_cap": 10.0,
+  "hard_stop": true,
+  "existing_credit_not_assumed": "45 USD historical context is not runtime truth",
+  "spend_source": "state/intelligence_budget.json"
+}

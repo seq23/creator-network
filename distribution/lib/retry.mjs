@@ -1,0 +1,1 @@
+export function nextRetry(job, policy, now=Date.now()){const n=job.attempts||0;if(n>=policy.max_attempts)return {action:'QUARANTINE'};const delay=policy.backoff_seconds[Math.min(n,policy.backoff_seconds.length-1)]||7200;return {action:'RETRY',retry_at:new Date(now+delay*1000).toISOString()};}

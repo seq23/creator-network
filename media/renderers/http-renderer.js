@@ -1,0 +1,3 @@
+function required(name){const v=process.env[name];if(!v)throw new Error(`MISSING_ENV:${name}`);return v;}
+async function submit({apiUrlEnv,apiKeyEnv,payload,idempotencyKey}){const url=required(apiUrlEnv),key=required(apiKeyEnv);const r=await fetch(url,{method:'POST',headers:{'content-type':'application/json','authorization':`Bearer ${key}`,'idempotency-key':idempotencyKey},body:JSON.stringify(payload)});const text=await r.text();let body;try{body=JSON.parse(text)}catch{body={raw:text.slice(0,500)}}if(!r.ok)throw new Error(`RENDER_HTTP_${r.status}:${JSON.stringify(body).slice(0,300)}`);return body;}
+module.exports={submit};

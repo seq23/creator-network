@@ -1,0 +1,3 @@
+const MAX={LIGHT:30*864e5,CURRENT:7*864e5,HIGH_STAKES:864e5};
+function check(pack,tier,now=new Date()) { if(tier==='NONE')return {ok:true}; if(!pack)return {ok:false,reason:'MISSING_EVIDENCE'}; const exp=Date.parse(pack.expires_at||''); if(!Number.isFinite(exp)||exp<now.getTime())return {ok:false,reason:'EXPIRED'}; const reviewed=Date.parse(pack.reviewed_at||''); const max=MAX[tier]; if(!Number.isFinite(reviewed)||now.getTime()-reviewed>max)return {ok:false,reason:'STALE'}; if(tier==='HIGH_STAKES' && (pack.claims||[]).some(c=>c.approved!==true))return {ok:false,reason:'UNAPPROVED_CLAIM'}; return {ok:true}; }
+module.exports={check};
