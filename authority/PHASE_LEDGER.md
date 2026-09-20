@@ -1,54 +1,51 @@
 # Phase Ledger
 
 ## Full intended system
-Standalone hands-off synthetic creator/customer-acquisition network for Marcus Vale, Nia Brooks, Camille Rose, and Maya Reyes. Existing product/business repositories are read-only knowledge sources and are never Creator Network mutation targets.
+Standalone hands-off network of four persistent virtual employees — Marcus Vale, Nia Brooks, Camille Rose, Maya Reyes — who research when necessary → plan → generate → QA → create media → schedule/publish through their own Buffer accounts → confirm → measure available platform signals → learn → maintain a pipeline floor → self-check → self-heal → report weekly. Existing product/business repositories are read-only knowledge sources and are never Creator Network mutation targets. Conversion attribution is a separate deferred project.
 
-## Phases
-1. **Control Plane Foundation** — implemented.
-2. **Attribution Architecture** — deferred; runbook retained at `docs/DEFERRED_ATTRIBUTION_RUNBOOK.md`; not launch-blocking.
-3. **Intelligence Engine** — implemented; live provider credentials/spend disabled by default.
-4. **Media Factory** — implemented in this artifact; canonical reference images, paid renderer selection/bake-off, and live rendering remain intentionally unconfigured.
-5. **Distribution** — implemented in this artifact; live credentials/accounts and publishing remain disabled until Phase 9 launch configuration.
-6. **Analytics + Optimizer** — implemented; social performance normalization and organic allocation are available, while economic attribution remains deferred and paid amplification is blocked.
-7. **Self-Healing** — implemented; live external-path certification remains intentionally UNVERIFIED until Phase 9 configuration.
-8. **Weekly Owner Reporting** — implemented; live email credentials/delivery remain disabled until Phase 9 configuration.
-9. **Autonomous Launch + Hardening** — implemented as a production-gated, fail-closed orchestration/readiness layer; real account/credential activation remains operator configuration.
-10. **Deferred Conversion Attribution Integration** — separate future project, separate approval.
+## Numbering
+This ledger uses the **15-phase production-completion numbering** from the 2026-09-20 handoff. The original build used a 10-phase numbering (kept below under *Build history*); "Phase N" anywhere else in this repository refers to the build history unless it cites this table.
 
-## Current artifact scope
-Phase 9: production-gated autonomous orchestration, readiness certification, daily workflow, atomic state receipts, launch hardening, isolation and fail-closed activation. Real credentials/accounts and canonical approved identity media are intentionally not fabricated by the artifact.
+## Phase ledger (15)
+
+| # | Phase | State | Evidence / what is still missing |
+|---|---|---|---|
+| 1 | Buffer read-only discovery | **COMPLETE — LIVE VALIDATED** (2026-09-20) | `scripts/vault-exec.py` + `scripts/buffer-discovery.mjs`; four keys verified against `account.email`, isolation PASS, ids in `distribution/config/buffer-discovery.json`, report in `docs/BUFFER_DISCOVERY_REPORT.md`. Finding: **zero social channels connected on all four accounts.** |
+| 2 | Production gap audit | PARTIAL | `docs/reviews/PHASE9_HOSTILE_REVIEW.md` + the 2026-09-20 discovery pass; no in-repo per-capability PROVEN/UNPROVEN table yet |
+| 3 | Production infrastructure | NOT STARTED | no Creator Network Worker/D1/R2/KV exists in the Cloudflare account; `cloudflare/state-worker/wrangler.toml` still carries a placeholder D1 id |
+| 4 | Cloud credential provisioning | NOT STARTED | 0 GitHub secrets/variables; the documented plaintext `secrets/creator-network.env` path contradicts the vault contract and must be replaced by a vault-injected path (`scripts/vault-exec.py` is the local half) |
+| 5 | Employee completion | PARTIAL | contracts exist; memory empty; `knowledge/` is a README; three `public_email` values are placeholders |
+| 6 | Intelligence + content engine | PARTIAL | router/QA policy/budget governor/freshness are unit-tested; the runtime INTELLIGENCE step performs no research, builds no evidence pack, never consults the budget governor; model ids unset |
+| 7 | Visual identities | PARTIAL | IDENTITY/VOICE JSON for all four; every canonical reference slot is empty |
+| 8 | Renderer bake-off + integration | NOT STARTED | `media/bakeoff/BAKEOFF_PROTOCOL.md` only; no vendor selected; paid renderers disabled |
+| 9 | Media production pipeline | PARTIAL | contracts, director, job-state, cost governor; the MEDIA step chooses a mode but renders nothing; library empty |
+| 10 | Buffer distribution | PARTIAL | `createPost`/confirm/slots/idempotency/retry are mock-tested; never exercised live; all four accounts `enabled:false`; **no channels exist to post to** |
+| 11 | Autonomous orchestration | PARTIAL | `runtime/run.mjs` wires PRECHECK→PERSIST; CONFIRM/METRICS/OPTIMIZE are `DEFERRED` no-ops that no later run picks up; SAFE_STANDBY exits 0 (inert-green) |
+| 12 | Health + self-healing | PARTIAL | framework and playbooks unit-tested; nothing in the runtime invokes `runHeartbeat`/`boundedRecover`; every live check is an `UNVERIFIED` placeholder |
+| 13 | Weekly owner report | PARTIAL | compiler + sender unit-tested; reads local `state/*.json` that GitHub Actions never persists; not wired to durable state; delivery disabled; no provider chosen |
+| 14 | Controlled production launch | NOT STARTED | — |
+| 15 | Hands-off certification | NOT STARTED | — |
+
+## Current phase
+Phase 1 delivered. **Next required phase: 2 (gap audit table in-repo) folded into 3 (production infrastructure)** — the D1/Worker durable-state backend is the dependency for 11, 12 and 13.
+
+## Named stops (owner-only)
+- **Connect social channels to each Buffer account.** Discovery found 0 channels on all four accounts. Connecting Instagram/Threads/X/TikTok/YouTube is an OAuth flow inside each creator's Buffer login; the API cannot do it. Phases 10 and 14 cannot be live-validated until at least one channel exists per creator.
 
 ## Permanent repository boundary
 Creator Network may READ portfolio repositories for product knowledge. It MUST NOT mutate them. Any future downstream mutation requires a separate owner-approved project.
 
-## Not included
-No canonical creator images have been generated/approved yet; no paid renderer has been selected or enabled; no live rendering spend; Buffer credentials/channels are not configured and live publishing is disabled; no live external-provider health certification; weekly report delivery credentials are not configured and live delivery is disabled until Phase 9; no autonomous launch.
+## Credential law
+Four Buffer credentials, one per creator, authorised to project `creator-network` in the owner's Repo Operator vault. The legacy `buffer-access-token` is not this project's and is never used. Values reach a process only through a vault-injected child (`scripts/vault-exec.py`) and are never written to the repository, printed, or placed in argv.
 
-## Next required phase
-No additional Creator Network build phase. Operator configuration/credential connection and local validation are required before live activation. Conversion attribution remains a separate deferred project.
-
-## Historical Phase 2 receipt
-Phase 2A created standalone attribution reference infrastructure. Phase 2B performed read-only integration analysis. By later owner direction, attribution was deferred; downstream repository mutation is not claimed and is not part of the Creator Network launch path.
-
-## Phase 4 — Media Factory
-Implemented in this artifact under the scope above.
-
-## Phase 5 — Distribution
-Implemented in this artifact under the scope above.
-
-## Phase 6 — Analytics + Optimizer
-Implemented in this artifact. `SCALE` means organic production scaling only while conversion attribution is deferred; paid amplification remains prohibited.
-
-## Phase 7 — Self-Healing
-Implemented in this artifact. Health certification is proof-bearing; unconfigured launch-critical external services remain `UNVERIFIED`. Deferred attribution is non-blocking by explicit owner direction.
-
-## Phase 8 — Weekly Owner Reporting
-Implemented in this artifact. Reports are evidence-bound: unavailable metrics remain unavailable, deferred attribution is disclosed, and HEALTHY cannot be inferred without proof-bearing health state. Live email delivery remains disabled until Phase 9.
-
-## Phase 9 — Autonomous Launch + Hardening
-Implemented in this artifact. The system ships SAFE_STANDBY and refuses to represent itself as live-ready until launch-critical configuration is present. Existing portfolio repositories remain read-only.
-
-## Production Hardening Remediation
-Status: IMPLEMENTED IN BASELINE; LIVE CONFIGURATION/DEPLOYMENT UNPROVEN.
-Scope: remediate hostile-review HR-001 runtime wiring and HR-002 durable state. Added concrete autonomous runtime wiring, fail-closed missing-step behavior, Cloudflare Worker + D1 durable state, runtime receipts, GitHub Actions state API wiring, explicit activation controls, and tests.
-Not included: real credentials, Cloudflare deployment/resource creation, Buffer enablement, approved creator face assets, live paid renderer selection, or live production proof. Existing product/business repos remain untouched.
+## Build history (original 10-phase numbering)
+1. Control Plane Foundation — implemented.
+2. Attribution Architecture — deferred; runbook retained at `docs/DEFERRED_ATTRIBUTION_RUNBOOK.md`; not launch-blocking.
+3. Intelligence Engine — implemented; live provider credentials/spend disabled by default.
+4. Media Factory — implemented; canonical reference images, renderer bake-off, and live rendering unconfigured.
+5. Distribution — implemented; live credentials/accounts and publishing disabled.
+6. Analytics + Optimizer — implemented; organic allocation only, paid amplification blocked.
+7. Self-Healing — implemented; live external-path certification UNVERIFIED.
+8. Weekly Owner Reporting — implemented; live delivery disabled.
+9. Autonomous Launch + Hardening — production-gated, fail-closed orchestration; hostile review (`docs/reviews/PHASE9_HOSTILE_REVIEW.md`) and remediation (`docs/reviews/PRODUCTION_HARDENING_REMEDIATION.md`) applied.
+10. Deferred Conversion Attribution Integration — separate future project, separate approval.

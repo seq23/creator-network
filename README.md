@@ -26,3 +26,6 @@ Production-gated orchestration and readiness certification are implemented. The 
 
 ## Hostile-review correction (2026-09-20)
 Phase 9 is **not production-autonomous yet**. A hostile review found that the launch orchestrator was not wired to real subsystem steps and GitHub Actions did not provide durable cross-run state. This baseline therefore hard-blocks READY until `AUTONOMOUS_RUNTIME_WIRED=true` and `DURABLE_STATE_CONFIGURED=true` are backed by actual implementation and integration proof. See `docs/reviews/PHASE9_HOSTILE_REVIEW.md` and `ops/env/ENV_VAULT.md`.
+
+## Production completion (2026-09-20 →)
+Phase numbering moved to the 15-phase completion ledger in `authority/PHASE_LEDGER.md`. Phase 1 (Buffer read-only discovery) is live-validated: four isolated accounts, identities verified, **zero social channels connected** — connecting channels is an owner action inside each Buffer login.

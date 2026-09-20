@@ -1,0 +1,89 @@
+{
+  "discovered_at": "2026-09-20T21:31:43.308Z",
+  "status": "DISCOVERED_NO_CHANNELS",
+  "api": "https://api.buffer.com (GraphQL, account-scoped key)",
+  "isolation": {
+    "isolated": true,
+    "identity_ok": true,
+    "collisions": [],
+    "identity_failures": []
+  },
+  "failures": [],
+  "creators": [
+    {
+      "creator_id": "marcus_vale",
+      "expected_email": "marcus@aplayermode.com",
+      "account_id": "6ab046916b48e0df99937a15",
+      "account_email": "marcus@aplayermode.com",
+      "identity_verified": true,
+      "organizations": [
+        {
+          "id": "6ab046916b48e0df99937a17",
+          "name": "My organization",
+          "owner_email": "marcus@aplayermode.com",
+          "channel_count": 0
+        }
+      ],
+      "channels": [],
+      "postable_channels": 0
+    },
+    {
+      "creator_id": "nia_brooks",
+      "expected_email": "nia@approvalprep.com",
+      "account_id": "6ab046bb636d96adb7c20d76",
+      "account_email": "nia@approvalprep.com",
+      "identity_verified": true,
+      "organizations": [
+        {
+          "id": "6ab046bb636d96adb7c20d79",
+          "name": "My organization",
+          "owner_email": "nia@approvalprep.com",
+          "channel_count": 0
+        }
+      ],
+      "channels": [],
+      "postable_channels": 0
+    },
+    {
+      "creator_id": "camille_rose",
+      "expected_email": "camille@weddingchecklistpdf.com",
+      "account_id": "6ab046e52dfd870cfa807775",
+      "account_email": "camille@weddingchecklistpdf.com",
+      "identity_verified": true,
+      "organizations": [
+        {
+          "id": "6ab046e52dfd870cfa807778",
+          "name": "My organization",
+          "owner_email": "camille@weddingchecklistpdf.com",
+          "channel_count": 0
+        }
+      ],
+      "channels": [],
+      "postable_channels": 0
+    },
+    {
+      "creator_id": "maya_reyes",
+      "expected_email": "maya@theindustryguides.com",
+      "account_id": "6ab04713abc95b2f7af8a375",
+      "account_email": "maya@theindustryguides.com",
+      "identity_verified": true,
+      "organizations": [
+        {
+          "id": "6ab04713abc95b2f7af8a377",
+          "name": "My organization",
+          "owner_email": "maya@theindustryguides.com",
+          "channel_count": 0
+        }
+      ],
+      "channels": [],
+      "postable_channels": 0
+    }
+  ],
+  "channel_env": {},
+  "org_env": {
+    "BUFFER_ORG_ID_MARCUS_VALE": "6ab046916b48e0df99937a17",
+    "BUFFER_ORG_ID_NIA_BROOKS": "6ab046bb636d96adb7c20d79",
+    "BUFFER_ORG_ID_CAMILLE_ROSE": "6ab046e52dfd870cfa807778",
+    "BUFFER_ORG_ID_MAYA_REYES": "6ab04713abc95b2f7af8a377"
+  }
+}
