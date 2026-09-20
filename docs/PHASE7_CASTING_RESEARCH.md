@@ -25,11 +25,14 @@ Latina — and every generated shot states it, because models default to white w
 - **Casting:** Black man, 34, deep brown skin, low fade with short waves, neat short beard, strong jaw, lean athletic
   build (not bodybuilder), calm intense eyes. Quarter-zip / overshirt (already in wardrobe).
 
-## Nia Brooks — USCIS / approval prep (ApprovalPrep)
-- **Comparables:** immigration attorneys who became explainer creators — Ana Gabriela Urizar (N-400 / naturalisation
-  content), "Attorney Saleem" (USCIS rules explainers). Credibility cues are lawyer-adjacent: blazer over a tee,
-  office or bookshelf, precise but warm. Audience is applicants and their families — first-gen, "one of us who knows
-  the system". ([search: USCIS explainer creators](https://www.tiktok.com/discover/us-citizenship-test-tip-2026))
+## Nia Brooks — rental / credit approval prep (ApprovalPrep)
+- **Correction (2026-09-20):** an earlier draft framed Nia as USCIS/immigration. ApprovalPrep is *approval* prep —
+  first apartment, credit-challenged, recently denied, gig/self-employed income (`employees/nia_brooks/employee.json`
+  ICPs). Immigration medical exams belong to Maya / Industry Guides.
+- **Comparables:** the personal-finance "big sister" creators — Vivian Tu (Your Rich BFF: direct-to-camera, blazer,
+  plain-spoken), Tori Dunlap (Her First $100K), Humphrey Yang — and the adulting-explainer wave of 2026. Credibility
+  cues are professional-adjacent (blazer over a tee, tidy office, glasses) delivered as "one of us who read the fine
+  print". ([Wikipedia: Vivian Tu](https://en.wikipedia.org/wiki/Vivian_Tu), [CreatorDB](https://creatordb.app/free-influencer-search-tool/top-creators-2026/education/))
 - **Casting:** Mixed Black and Korean-American woman, 27, light-medium brown skin, long dark loose waves half pulled
   back, clear-framed glasses (trust cue), minimal gold studs, open expressive face. Blazer over plain tee; clean office
   with a bookshelf.
