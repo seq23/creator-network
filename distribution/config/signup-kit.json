@@ -1,0 +1,77 @@
+{
+  "generated_for": "owner-only signup of the four creators' social accounts (SMS/CAPTCHA on real hardware) — ledger named stop",
+  "platform_order": [
+    "threads",
+    "instagram",
+    "tiktok",
+    "x",
+    "youtube"
+  ],
+  "platform_order_why": "Threads and Instagram share one Meta login and connect to Buffer in one step; TikTok next (largest reach for short video); X is low-effort; YouTube last (Shorts are selective and need a Google account per creator).",
+  "bio_limits": {
+    "tiktok": 80,
+    "instagram": 150,
+    "threads": 150,
+    "x": 160,
+    "youtube": 1000
+  },
+  "disclosure_line": "Virtual creator 🤖",
+  "creators": {
+    "marcus_vale": {
+      "display_name": "Marcus Vale",
+      "handles": [
+        "marcusvale.os",
+        "marcus.vale.os"
+      ],
+      "link": "https://aplayermode.com",
+      "email": "marcus@aplayermode.com",
+      "birth_year": 1992,
+      "bio": {
+        "short": "Potential expires if you never turn it into behavior. Virtual creator 🤖",
+        "long": "Ambition, execution, reinvention — for men who know they're operating at 60%. A-Player Audit · 90-Day Rebuild · Build Your OS. Virtual creator 🤖"
+      }
+    },
+    "nia_brooks": {
+      "display_name": "Nia Brooks",
+      "handles": [
+        "niabrooks.prep",
+        "nia.approvalprep"
+      ],
+      "link": "https://approvalprep.com",
+      "email": "nia@approvalprep.com",
+      "birth_year": 1999,
+      "bio": {
+        "short": "Nobody taught us how any of this works. So I did. Virtual creator 🤖",
+        "long": "First apartment, credit, getting approved after a denial, gig income — the fine print, explained by someone who read it. Virtual creator 🤖"
+      }
+    },
+    "camille_rose": {
+      "display_name": "Camille Rose",
+      "handles": [
+        "camillerose.weddings",
+        "camille.plans.weddings"
+      ],
+      "link": "https://weddingchecklistpdf.com",
+      "email": "camille@weddingchecklistpdf.com",
+      "birth_year": 1997,
+      "bio": {
+        "short": "Romantic wedding. Project-managed planning. Virtual creator 🤖",
+        "long": "Romantic wedding, project-managed planning. Bride Emergency · Save or Splurge · Wedding Countdown. Free checklist ↓ Virtual creator 🤖"
+      }
+    },
+    "maya_reyes": {
+      "display_name": "Maya Reyes",
+      "handles": [
+        "mayareyes.guides",
+        "maya.reyes.guides"
+      ],
+      "link": "https://theindustryguides.com",
+      "email": "maya@theindustryguides.com",
+      "birth_year": 2000,
+      "bio": {
+        "short": "High-stakes, expensive stuff — researched before you need it. Virtual creator 🤖",
+        "long": "Accidents, dentists, hormones, evaluations, immigration medicals — the confusing, expensive stuff, researched before you need it. Virtual creator 🤖"
+      }
+    }
+  }
+}

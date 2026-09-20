@@ -15,6 +15,7 @@
     "secrets:github": "python3 scripts/vault-exec.py -- sh scripts/github-secrets.sh",
     "vars:github": "sh scripts/github-variables.sh",
     "probe:actions": "python3 scripts/vault-exec.py -- node scripts/actions-state-probe.mjs",
-    "identities:generate": "python3 scripts/vault-exec.py -- node scripts/identity-references.mjs"
+    "identities:generate": "python3 scripts/vault-exec.py -- node scripts/identity-references.mjs",
+    "signup:kit": "node scripts/signup-kit.mjs"
   }
 }

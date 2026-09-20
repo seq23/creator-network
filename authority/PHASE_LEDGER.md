@@ -30,7 +30,7 @@ This ledger uses the **15-phase production-completion numbering** from the 2026-
 Phases 1–4 and 7 delivered. **Next: the per-creator social-account signup kit** (owner-only signup), then 5/6/8/9/11/12/13, then 10/14/15.
 
 ## Named stops (owner-only)
-- **The creators' social accounts do not exist yet** (owner, 2026-09-20), so no Buffer channels exist. Signup needs SMS/CAPTCHA on real hardware and automating it would flag the accounts at birth. Sequence: Phase 7 produces approved avatars → a per-creator signup kit (handle, bio, link, avatar, which creator email) → owner signs up and connects each channel in Buffer → re-run `scripts/buffer-discovery.mjs`. Phases 10 and 14 wait on this; nothing else does.
+- **The creators' social accounts do not exist yet** (owner, 2026-09-20), so no Buffer channels exist. Signup needs SMS/CAPTCHA on real hardware and automating it would flag the accounts at birth. Sequence: Phase 7 approved avatars (done) → **signup kit ready: `docs/SIGNUP_KIT.md`** (`npm run signup:kit`) → owner signs up and connects each channel in Buffer → re-run `scripts/buffer-discovery.mjs`. Phases 10 and 14 wait on this; nothing else does.
 
 ## Permanent repository boundary
 Creator Network may READ portfolio repositories for product knowledge. It MUST NOT mutate them. Any future downstream mutation requires a separate owner-approved project.
