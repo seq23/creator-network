@@ -45,9 +45,9 @@ Latina — and every generated shot states it, because models default to white w
 ## Maya Reyes — research-based explainers (Industry Guides)
 - **Comparables:** Tefi Pessoa (the internet's "big sister" — explainers that became trusted real-life advice),
   Vivian Tu (direct-to-camera finance explainers, blazer, plain-spoken). The 2026 educator-creator wave. ([Rolling Stone](https://www.rollingstone.com/culture/culture-lists/top-social-media-influencers-creators-2026-1235605189/), [Wikipedia: Vivian Tu](https://en.wikipedia.org/wiki/Vivian_Tu))
-- **Casting:** Latina woman (Mexican-American — the surname stays honest), 31, warm medium tan skin, dark brown wavy
-  shoulder-length hair, light-framed glasses, cardigan or soft blazer over a crew neck, grounded reassuring expression.
-  Desk with notes and a lamp.
+- **Casting (owner revision 2026-09-20 — younger, more modelesque):** Latina woman (Mexican-American), 26, warm
+  medium tan skin, long dark glossy waves, high cheekbones, full lips, editorial polish; fitted soft blazer over a ribbed
+  crew neck; clean desk with notes and a lamp.
 
 ## Generation route
 `npm run identities:generate` — `scripts/identity-references.mjs` inside the vault child (`OPENAI_IMAGE_API_KEY`,
