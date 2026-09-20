@@ -1,0 +1,149 @@
+{
+  "creator_id": "camille_rose",
+  "slots": {
+    "face_front": {
+      "file": "face_front.png",
+      "sha256": "cf8cb34627eea28977e93d3d688b651fb0b4d3ae08a99780e018f074d93f0e9c",
+      "bytes": 1449004,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:14:04.728Z",
+      "derived_from": null,
+      "prompt": "head-and-shoulders portrait, facing camera directly, direct eye contact, neutral-warm expression, mouth closed. A White (American) woman, age 29, fair with warm undertone, light freckles skin, honey-blonde sleek low bun (alternate: soft waves). soft features, easy genuine smile, organised calm; one delicate necklace. warm organized wedding-planning creative; polished but not bridal-model perfection. Wearing soft neutral blouse. Setting: tailored neutrals (cream, sage, camel); bright studio with florals in soft focus. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, natural skin texture with visible pores, realistic and believable, not a model, not airbrushed. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed, model-perfect symmetry. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 258,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 258
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 2014
+      }
+    },
+    "face_left": {
+      "file": "face_left.png",
+      "sha256": "f4c848b649a1f62102004ce9d4d84a86a43b4cef4aee8770458c99814c1193c4",
+      "bytes": 1432668,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:14:39.119Z",
+      "derived_from": "face_front.png",
+      "prompt": "same person, head turned about 35 degrees to their left (camera sees their right side), eyes toward camera. A White (American) woman, age 29, fair with warm undertone, light freckles skin, honey-blonde sleek low bun (alternate: soft waves). soft features, easy genuine smile, organised calm; one delicate necklace. warm organized wedding-planning creative; polished but not bridal-model perfection. Wearing soft neutral blouse. Setting: tailored neutrals (cream, sage, camel); bright studio with florals in soft focus. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, natural skin texture with visible pores, realistic and believable, not a model, not airbrushed. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed, model-perfect symmetry. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 1282,
+        "input_tokens_details": {
+          "image_tokens": 1024,
+          "text_tokens": 258
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 3038
+      }
+    },
+    "face_right": {
+      "file": "face_right.png",
+      "sha256": "23850f4c265f56742777ba81a2d6608751409cc172209f9fb346949278884988",
+      "bytes": 1441374,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:15:36.841Z",
+      "derived_from": "face_front.png",
+      "prompt": "same person, head turned about 35 degrees to their right (camera sees their left side), eyes toward camera. A White (American) woman, age 29, fair with warm undertone, light freckles skin, honey-blonde sleek low bun (alternate: soft waves). soft features, easy genuine smile, organised calm; one delicate necklace. warm organized wedding-planning creative; polished but not bridal-model perfection. Wearing soft neutral blouse. Setting: tailored neutrals (cream, sage, camel); bright studio with florals in soft focus. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, natural skin texture with visible pores, realistic and believable, not a model, not airbrushed. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed, model-perfect symmetry. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 1282,
+        "input_tokens_details": {
+          "image_tokens": 1024,
+          "text_tokens": 258
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 3038
+      }
+    },
+    "face_smile": {
+      "file": "face_smile.png",
+      "sha256": "fa4bc561e0b58e7927d67d177bfe47cc9f11930c5b7822cbde42b9ea9bd386ac",
+      "bytes": 1467636,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:16:12.675Z",
+      "derived_from": "face_front.png",
+      "prompt": "same person, facing camera, genuine warm smile showing teeth, eyes crinkled. A White (American) woman, age 29, fair with warm undertone, light freckles skin, honey-blonde sleek low bun (alternate: soft waves). soft features, easy genuine smile, organised calm; one delicate necklace. warm organized wedding-planning creative; polished but not bridal-model perfection. Wearing soft neutral blouse. Setting: tailored neutrals (cream, sage, camel); bright studio with florals in soft focus. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, natural skin texture with visible pores, realistic and believable, not a model, not airbrushed. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed, model-perfect symmetry. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 1276,
+        "input_tokens_details": {
+          "image_tokens": 1024,
+          "text_tokens": 252
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 3032
+      }
+    },
+    "face_neutral": {
+      "file": "face_neutral.png",
+      "sha256": "8f5921c8d0c60f3e973ca2e97a8f0cb9551527705035f4b91f3dfd05758c8086",
+      "bytes": 1443107,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:16:44.612Z",
+      "derived_from": "face_front.png",
+      "prompt": "same person, facing camera, relaxed neutral resting expression, mouth closed, calm. A White (American) woman, age 29, fair with warm undertone, light freckles skin, honey-blonde sleek low bun (alternate: soft waves). soft features, easy genuine smile, organised calm; one delicate necklace. warm organized wedding-planning creative; polished but not bridal-model perfection. Wearing soft neutral blouse. Setting: tailored neutrals (cream, sage, camel); bright studio with florals in soft focus. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, natural skin texture with visible pores, realistic and believable, not a model, not airbrushed. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed, model-perfect symmetry. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 1275,
+        "input_tokens_details": {
+          "image_tokens": 1024,
+          "text_tokens": 251
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 3031
+      }
+    },
+    "body": {
+      "file": "body.png",
+      "sha256": "b40c35596276f41627fee34bd4353679bb21c88c94e5b0708596c66c3dcd7388",
+      "bytes": 1320364,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:17:21.876Z",
+      "derived_from": "face_front.png",
+      "prompt": "same person, three-quarter body shot from mid-thigh up, standing, hands relaxed, same wardrobe, same environment. A White (American) woman, age 29, fair with warm undertone, light freckles skin, honey-blonde sleek low bun (alternate: soft waves). soft features, easy genuine smile, organised calm; one delicate necklace. warm organized wedding-planning creative; polished but not bridal-model perfection. Wearing soft neutral blouse. Setting: tailored neutrals (cream, sage, camel); bright studio with florals in soft focus. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, natural skin texture with visible pores, realistic and believable, not a model, not airbrushed. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed, model-perfect symmetry. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 1283,
+        "input_tokens_details": {
+          "image_tokens": 1024,
+          "text_tokens": 259
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 3039
+      }
+    }
+  }
+}

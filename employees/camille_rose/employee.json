@@ -43,7 +43,7 @@
     "Camille Fixes It",
     "Wedding Countdown"
   ],
-  "public_email": "camille@[primary wedding domain]",
+  "public_email": "camille@weddingchecklistpdf.com",
   "receiving_route": "Cloudflare Email Routing -> human-controlled recovery/receiving inbox (configured outside repo)",
   "credentials_policy": "references_only_no_secrets_in_git",
   "platforms": [

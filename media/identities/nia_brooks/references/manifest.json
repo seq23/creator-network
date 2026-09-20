@@ -1,0 +1,149 @@
+{
+  "creator_id": "nia_brooks",
+  "slots": {
+    "face_front": {
+      "file": "face_front.png",
+      "sha256": "81eb40acc389ef576ddbf1bbe530ec44364b93babefc396d95164694518fec62",
+      "bytes": 1788472,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:09:56.700Z",
+      "derived_from": null,
+      "prompt": "head-and-shoulders portrait, facing camera directly, direct eye contact, neutral-warm expression, mouth closed. A Mixed — Black and Korean-American woman, age 27, light-medium brown skin, long dark loose waves, half pulled back. open expressive face, warm precise energy, minimal gold stud earrings. Wearing clear-framed glasses. approachable young professional; expressive, practical, contemporary. Wearing casual knit top. Setting: blazer over plain tee; clean office with bookshelf. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, natural skin texture with visible pores, realistic and believable, not a model, not airbrushed. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed, model-perfect symmetry. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 244,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 244
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 2000
+      }
+    },
+    "face_left": {
+      "file": "face_left.png",
+      "sha256": "056f3b00411ee8139ea9b70c3a6fbefca88612aea4cd0156a7f6fd30f3d531fe",
+      "bytes": 1693689,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:10:40.316Z",
+      "derived_from": "face_front.png",
+      "prompt": "same person, head turned about 35 degrees to their left (camera sees their right side), eyes toward camera. A Mixed — Black and Korean-American woman, age 27, light-medium brown skin, long dark loose waves, half pulled back. open expressive face, warm precise energy, minimal gold stud earrings. Wearing clear-framed glasses. approachable young professional; expressive, practical, contemporary. Wearing casual knit top. Setting: blazer over plain tee; clean office with bookshelf. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, natural skin texture with visible pores, realistic and believable, not a model, not airbrushed. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed, model-perfect symmetry. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 1268,
+        "input_tokens_details": {
+          "image_tokens": 1024,
+          "text_tokens": 244
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 3024
+      }
+    },
+    "face_right": {
+      "file": "face_right.png",
+      "sha256": "4f43762b3fcdfa2446504ed3c83fc3d3d46b03ad6fb474d52fbbfa62d2fd4c8e",
+      "bytes": 1675836,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:11:18.607Z",
+      "derived_from": "face_front.png",
+      "prompt": "same person, head turned about 35 degrees to their right (camera sees their left side), eyes toward camera. A Mixed — Black and Korean-American woman, age 27, light-medium brown skin, long dark loose waves, half pulled back. open expressive face, warm precise energy, minimal gold stud earrings. Wearing clear-framed glasses. approachable young professional; expressive, practical, contemporary. Wearing casual knit top. Setting: blazer over plain tee; clean office with bookshelf. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, natural skin texture with visible pores, realistic and believable, not a model, not airbrushed. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed, model-perfect symmetry. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 1268,
+        "input_tokens_details": {
+          "image_tokens": 1024,
+          "text_tokens": 244
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 3024
+      }
+    },
+    "face_smile": {
+      "file": "face_smile.png",
+      "sha256": "4965529ace01857259b55d0c8d999ca409b12493e5452b352e6d96f1f76f39f7",
+      "bytes": 1722538,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:11:51.731Z",
+      "derived_from": "face_front.png",
+      "prompt": "same person, facing camera, genuine warm smile showing teeth, eyes crinkled. A Mixed — Black and Korean-American woman, age 27, light-medium brown skin, long dark loose waves, half pulled back. open expressive face, warm precise energy, minimal gold stud earrings. Wearing clear-framed glasses. approachable young professional; expressive, practical, contemporary. Wearing casual knit top. Setting: blazer over plain tee; clean office with bookshelf. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, natural skin texture with visible pores, realistic and believable, not a model, not airbrushed. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed, model-perfect symmetry. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 1262,
+        "input_tokens_details": {
+          "image_tokens": 1024,
+          "text_tokens": 238
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 3018
+      }
+    },
+    "face_neutral": {
+      "file": "face_neutral.png",
+      "sha256": "7f9f1b5a2e61d9ea8192bf79886ad93fc7fa4c1d57d483e26e551b4cff74b10f",
+      "bytes": 1752113,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:12:25.942Z",
+      "derived_from": "face_front.png",
+      "prompt": "same person, facing camera, relaxed neutral resting expression, mouth closed, calm. A Mixed — Black and Korean-American woman, age 27, light-medium brown skin, long dark loose waves, half pulled back. open expressive face, warm precise energy, minimal gold stud earrings. Wearing clear-framed glasses. approachable young professional; expressive, practical, contemporary. Wearing casual knit top. Setting: blazer over plain tee; clean office with bookshelf. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, natural skin texture with visible pores, realistic and believable, not a model, not airbrushed. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed, model-perfect symmetry. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 1261,
+        "input_tokens_details": {
+          "image_tokens": 1024,
+          "text_tokens": 237
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 3017
+      }
+    },
+    "body": {
+      "file": "body.png",
+      "sha256": "cc2e303231966e39acc9dee9da97422107d9eab545285e17a5055daf42b2ee96",
+      "bytes": 1505791,
+      "model": "gpt-image-2",
+      "size": "1024x1024",
+      "quality": "medium",
+      "generated_at": "2026-09-20T22:13:31.155Z",
+      "derived_from": "face_front.png",
+      "prompt": "same person, three-quarter body shot from mid-thigh up, standing, hands relaxed, same wardrobe, same environment. A Mixed — Black and Korean-American woman, age 27, light-medium brown skin, long dark loose waves, half pulled back. open expressive face, warm precise energy, minimal gold stud earrings. Wearing clear-framed glasses. approachable young professional; expressive, practical, contemporary. Wearing casual knit top. Setting: blazer over plain tee; clean office with bookshelf. photographed like a high-converting talking-head creator: warm key light at 45 degrees slightly above eye level, soft fill, eyes on the upper-third line, slight headroom, clean softly-blurred background, 85mm lens look, natural skin texture with visible pores, realistic and believable, not a model, not airbrushed. Photorealistic. No text, no logos, no watermark. Avoid: celebrity likeness, real-person likeness, extra fingers, warped teeth, plastic skin, text artifacts, brand logos unless approved, luxury wealth flex unless explicitly approved, plastic skin / airbrushed, model-perfect symmetry. This is a fictional synthetic person; do not resemble any real or famous person.",
+      "usage": {
+        "input_tokens": 1269,
+        "input_tokens_details": {
+          "image_tokens": 1024,
+          "text_tokens": 245
+        },
+        "output_tokens": 1756,
+        "output_tokens_details": {
+          "image_tokens": 1756,
+          "text_tokens": 0
+        },
+        "total_tokens": 3025
+      }
+    }
+  }
+}

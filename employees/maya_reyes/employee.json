@@ -43,7 +43,7 @@
     "Adulting Emergency",
     "Questions I\u2019d Ask"
   ],
-  "public_email": "maya@[primary Industry Guides domain]",
+  "public_email": "maya@theindustryguides.com",
   "receiving_route": "Cloudflare Email Routing -> human-controlled recovery/receiving inbox (configured outside repo)",
   "credentials_policy": "references_only_no_secrets_in_git",
   "platforms": [

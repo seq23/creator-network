@@ -43,7 +43,7 @@
     "Stop Negotiating",
     "Build Your OS"
   ],
-  "public_email": "marcus@[A Player Mode domain]",
+  "public_email": "marcus@aplayermode.com",
   "receiving_route": "Cloudflare Email Routing -> human-controlled recovery/receiving inbox (configured outside repo)",
   "credentials_policy": "references_only_no_secrets_in_git",
   "platforms": [
