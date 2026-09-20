@@ -20,7 +20,7 @@ Classification of every major capability in the 2026-09-20 handoff against the c
 | Independent QA + states (PASS/REVISE/HUMAN_REVIEW/REJECT) | IMPLEMENTED + UNPROVEN | `qa-policy.js` + model audit; unit-tested; no bounded regeneration loop in runtime | Phase 6 |
 | Quarantine | IMPLEMENTED + UNPROVEN | `quarantine.js` unit-tested; runtime halts but never writes a quarantine record | Phase 6 |
 | Budget governors (intelligence + media) | IMPLEMENTED + UNPROVEN | unit-tested; runtime never consults them | Phase 6/9 |
-| Canonical visual identities | IMPLEMENTED + UNPROVEN | casting + 24 hash-locked references (`media/identities/CONTACT_SHEET.png`); unproven until owner-approved and consumed by a live render | Phase 7/8 |
+| Canonical visual identities | IMPLEMENTED + PROVEN | `docs/PHASE7_CASTING_RESEARCH.md`; 24 hash-locked, owner-approved references, `media/identities/CONTACT_SHEET.png` | — |
 | Renderer abstraction | PARTIAL | registry + generic HTTP submit; no vendor, no result polling, no asset retrieval | Phase 8 |
 | Renderer bake-off | MISSING | protocol doc only | Phase 8 |
 | Media assembly (EDITED_SOCIAL) | PARTIAL | `local-ffmpeg.js` probe only; MEDIA step chooses a mode, renders nothing | Phase 9 |

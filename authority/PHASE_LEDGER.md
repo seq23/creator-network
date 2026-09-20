@@ -16,7 +16,7 @@ This ledger uses the **15-phase production-completion numbering** from the 2026-
 | 4 | Cloud credential provisioning | **COMPLETE — LIVE VALIDATED** (2026-09-20) | 5 GitHub secrets via vault → `gh secret set` (stdin), 15 variables; plaintext env path deleted; daily lane `state-check`/`state-outcome` write D1 receipts — run https://github.com/seq23/creator-network/actions/runs/35540046455, read back in `state/proof/actions-lane-receipts.json`; `docs/PHASE4_CLOUD_CREDENTIALS.md` |
 | 5 | Employee completion | PARTIAL | contracts exist; memory empty; `knowledge/` is a README; three `public_email` values are placeholders |
 | 6 | Intelligence + content engine | PARTIAL | router/QA policy/budget governor/freshness are unit-tested; the runtime INTELLIGENCE step performs no research, builds no evidence pack, never consults the budget governor; model ids unset |
-| 7 | Visual identities | PARTIAL | casting researched (`docs/PHASE7_CASTING_RESEARCH.md`) and recorded in each `IDENTITY.json`; all 24 reference slots generated (gpt-image-2, hash-locked in `references/manifest.json`, `media/identities/CONTACT_SHEET.png`); real `public_email`s; **awaiting owner approval per row** — COMPLETE when every manifest carries `owner_approved` |
+| 7 | Visual identities | **COMPLETE — OWNER APPROVED** (2026-09-20) | casting researched (`docs/PHASE7_CASTING_RESEARCH.md`), four backgrounds recorded in each `IDENTITY.json`; 24 reference slots generated (gpt-image-2), hash-locked and `owner_approved` in every `references/manifest.json`; `media/identities/CONTACT_SHEET.png`; real `public_email`s |
 | 8 | Renderer bake-off + integration | NOT STARTED | `media/bakeoff/BAKEOFF_PROTOCOL.md` only; no vendor selected; paid renderers disabled |
 | 9 | Media production pipeline | PARTIAL | contracts, director, job-state, cost governor; the MEDIA step chooses a mode but renders nothing; library empty |
 | 10 | Buffer distribution | PARTIAL | `createPost`/confirm/slots/idempotency/retry are mock-tested; never exercised live; all four accounts `enabled:false`; **no channels exist to post to** |
@@ -27,7 +27,7 @@ This ledger uses the **15-phase production-completion numbering** from the 2026-
 | 15 | Hands-off certification | NOT STARTED | — |
 
 ## Current phase
-Phases 1–4 delivered. **Next required phase: 7 (visual identities)** ahead of the social-account signup kit; then 5/6/8/9/11/12/13, then 10/14/15.
+Phases 1–4 and 7 delivered. **Next: the per-creator social-account signup kit** (owner-only signup), then 5/6/8/9/11/12/13, then 10/14/15.
 
 ## Named stops (owner-only)
 - **The creators' social accounts do not exist yet** (owner, 2026-09-20), so no Buffer channels exist. Signup needs SMS/CAPTCHA on real hardware and automating it would flag the accounts at birth. Sequence: Phase 7 produces approved avatars → a per-creator signup kit (handle, bio, link, avatar, which creator email) → owner signs up and connects each channel in Buffer → re-run `scripts/buffer-discovery.mjs`. Phases 10 and 14 wait on this; nothing else does.

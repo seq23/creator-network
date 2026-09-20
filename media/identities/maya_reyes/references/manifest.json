@@ -145,5 +145,11 @@
         "total_tokens": 3050
       }
     }
+  },
+  "owner_approved": {
+    "at": "2026-09-20T22:36:34Z",
+    "by": "owner",
+    "via": "contact sheet, AskUserQuestion, all four rows selected",
+    "sheet_sha256": "ecb222f5b1aa7d72a52d088f330dfdf08ef98ffc4655f0bae8bd9a383aca7397"
   }
 }
