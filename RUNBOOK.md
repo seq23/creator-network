@@ -32,7 +32,7 @@ weekly. Private repo seq23/creator-network. Longer authority, in reading order:
 - **`authority/PHASE_LEDGER.md` is status truth.** The 15-phase table is what is done and what is
   not; `tests/test_phase_ledger.py` parses it and fails on an invalid state, a proven row with no
   live artifact, or a missing named stop. Never infer a phase is done because its directory exists.
-- **Keys reach a process only through the vault**: `python3 scripts/vault-exec.py -- <cmd>`. Never
+- **Keys reach a process only through the Boss OS vault**: `python3 scripts/vault-exec.py -- <cmd>`. Never
   in the repo, never printed, never in argv. `npm run secret:state`, `smoke:state`, `secrets:github`,
   `probe:actions` and `identities:generate` are the wrapped forms.
 - **The four identities and the experiment IDs are preserved** unless an approved migration says
