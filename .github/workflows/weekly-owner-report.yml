@@ -1,8 +1,15 @@
 name: Weekly Owner Report
+# Wednesdays 07:23 America/Chicago (owner's rebalanced week, 1 Nov 2026): two UTC crons (12:23 in
+# CDT, 13:23 in CST) and a guard that lets only the one matching Chicago's offset run.
+#
+# NO EMAIL FROM HERE. The report is compiled as before; its summary is uploaded as the artifact
+# `spry-weekly-summary`, and Boss OS sends the ONE "Spry Labs weekly" email at 08:15 Central with a
+# short Creator Network section. A week this does not run, that email says so in a plain line.
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 13 * * 1'
+    - cron: '23 12 * * 3'
+    - cron: '23 13 * * 3'
 permissions:
   contents: read
 jobs:
@@ -10,15 +17,40 @@ jobs:
     timeout-minutes: 5  # ~3x median 0.1m over 3 green runs; fault detector, not a budget
     runs-on: ubuntu-latest
     steps:
+      - name: Guard Wednesday 07:23 Chicago
+        id: guard
+        env:
+          SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          offset=$(TZ=America/Chicago date +%z)
+          run=true
+          if [ "$SCHEDULE" = "23 12 * * 3" ] && [ "$offset" != "-0500" ]; then run=false; fi
+          if [ "$SCHEDULE" = "23 13 * * 3" ] && [ "$offset" != "-0600" ]; then run=false; fi
+          echo "run=$run" >> "$GITHUB_OUTPUT"
+          echo "schedule='${SCHEDULE:-dispatch}' chicago_offset=$offset run=$run"
       - uses: actions/checkout@v4
+        if: steps.guard.outputs.run == 'true'
       - uses: actions/setup-node@v4
+        if: steps.guard.outputs.run == 'true'
         with:
           node-version: '24'
-      - name: Generate report and optionally deliver
+      - name: Generate the report (delivery stays off; Boss OS sends the Spry Labs weekly)
+        if: steps.guard.outputs.run == 'true'
         env:
-          WEEKLY_REPORT_DELIVERY_ENABLED: ${{ secrets.WEEKLY_REPORT_DELIVERY_ENABLED }}
-          WEEKLY_EMAIL_ENDPOINT: ${{ secrets.WEEKLY_EMAIL_ENDPOINT }}
-          WEEKLY_EMAIL_TOKEN: ${{ secrets.WEEKLY_EMAIL_TOKEN }}
-          WEEKLY_OWNER_EMAIL: ${{ secrets.WEEKLY_OWNER_EMAIL }}
-          WEEKLY_REPORT_FROM: ${{ secrets.WEEKLY_REPORT_FROM }}
+          WEEKLY_REPORT_DELIVERY_ENABLED: 'false'
         run: node reporting/weekly_owner/run.mjs
+      - name: Hand the week to Boss OS
+        if: steps.guard.outputs.run == 'true'
+        env:
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          node reporting/weekly_owner/spry-weekly-summary.mjs --self-check
+          node reporting/weekly_owner/spry-weekly-summary.mjs state/reporting/latest-weekly-report.json spry-weekly-summary.json
+      - name: Upload the summary for Boss OS
+        if: steps.guard.outputs.run == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: spry-weekly-summary
+          path: spry-weekly-summary.json
+          if-no-files-found: error
+          retention-days: 30
