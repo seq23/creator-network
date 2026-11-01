@@ -16,7 +16,7 @@ weekly. Private repo seq23/creator-network. Longer authority, in reading order:
 |---|---|---|
 | Durable state | `cloudflare/state-worker/` (Worker `creator-network-state` + D1) | redeployed on every land |
 | Daily lane | `.github/workflows/daily-creator-network.yml` | GitHub Actions, reads `main` at fire time; `SAFE_STANDBY` until readiness |
-| Weekly owner report | `.github/workflows/weekly-owner-report.yml` | Monday; delivery fail-closed until configured |
+| Weekly owner report | `.github/workflows/weekly-owner-report.yml` | Wednesday 07:23 CT; no email, summary to Boss OS (Spry Labs weekly) |
 | Employees | `employees/` (contracts); `media/identities/` — per creator, an IDENTITY.json and a hash-locked references manifest (`media/identities/marcus_vale/references/manifest.json` is the shape) | — |
 | Experiments | `experiments/` (120 Generation-1 records; IDs stable) | — |
 | Distribution | `distribution/` (`distribution/config/buffer-discovery.json`, Buffer adapter) | live writes disabled by default |

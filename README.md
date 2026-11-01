@@ -19,7 +19,7 @@ Distribution control is implemented with Buffer GraphQL integration, employee is
 Self-Healing is implemented: independent employee heartbeats, proof-bearing health certification, bounded deterministic recovery, incident tracking, synthetic-check interfaces, and employee fault isolation. Live external services remain `UNVERIFIED` until configured and actively tested; the system does not claim false health. Attribution remains deferred and existing portfolio repositories remain read-only.
 
 ## Phase 8 — Weekly Owner Reporting
-The repository now contains an evidence-bound weekly owner report compiler and a Monday GitHub Actions workflow. Live email delivery is fail-closed and remains disabled until Phase 9 credentials/configuration and health proof are supplied.
+The repository now contains an evidence-bound weekly owner report compiler and a Wednesday 07:23 Central GitHub Actions workflow. It sends no email: its summary is uploaded as the `spry-weekly-summary` artifact and Boss OS puts it in the one Spry Labs weekly email (1 Nov 2026).
 
 ## Phase 9 — Autonomous Launch + Hardening
 Production-gated orchestration and readiness certification are implemented. The codebase ships in `SAFE_STANDBY`: it will not fabricate credentials, approved creator references, or external account connections. Once operator configuration passes readiness, the daily workflow is the autonomous entrypoint. Existing portfolio repositories remain read-only and attribution remains deferred.
